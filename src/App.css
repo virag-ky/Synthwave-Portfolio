@@ -1,0 +1,11 @@
+main {
+  background: url('./assets/header-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+#main-content {
+  background: url('./assets/header-bg.png');
+}

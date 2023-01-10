@@ -1,6 +1,4 @@
 import * as React from 'react';
-import PropTypes from 'prop-types';
-import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
 import Divider from '@mui/material/Divider';
@@ -16,6 +14,7 @@ import MailIcon from '@mui/icons-material/Mail';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
+import BackgroundImage from '../assets/header-bg.png'
 
 const drawerWidth = 240;
 
@@ -63,19 +62,20 @@ const Content = (props) => {
 
   return (
     <>
-    <Toolbar>
+    <CssBaseline />
+    <Box sx={{ display: 'flex', position: "absolute", paddingLeft: "20px" }}>
     <IconButton
       color="inherit"
       aria-label="open drawer"
       edge="start"
       onClick={handleDrawerToggle}
-      sx={{ mr: 2, display: { md: 'none' } }}
+      sx={{ mr: 2, display: { md: 'none'}}}
     >
-      <MenuIcon />
-    </IconButton>
-  </Toolbar>
+      <MenuIcon sx={{color: "#fff"}} />
+     </IconButton>
+     
+     </Box>
     <Box sx={{ display: 'flex' }}>
-      <CssBaseline />
       <Box
         component="nav"
         sx={{ width: { md: drawerWidth }, flexShrink: { md: 0 } }}
@@ -107,15 +107,17 @@ const Content = (props) => {
           {drawer}
         </Drawer>
       </Box>
+      
       <Box
         component="main"
         sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
       >
         <Toolbar />
-        <Typography variant='h1'>
+        {/* <Typography variant='h1'>
           Virag Kormoczy
-        </Typography>
+        </Typography> */}
       </Box>
+    
     </Box>
     </>
   );
