@@ -6,7 +6,15 @@ main {
   height: 100vh;
 }
 
-#main-content {
-  background: url('./assets/header-bg.png');
+#social-icons-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 15px;
 }
 
+#nav-icons-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

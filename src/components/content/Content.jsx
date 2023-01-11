@@ -27,6 +27,9 @@ const Content = (props) => {
       width: 240,
       backgroundColor: '#00001c',
     },
+    font: {
+      size: '20px',
+    },
   });
 
   const StyledNavContainer = styled(Box)(() => ({
