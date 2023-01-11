@@ -1,9 +1,9 @@
 import { Box } from '@mui/material';
-import IconButton from '@mui/material';
+import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import { styled } from '@mui/material/styles';
 
-const ToggleButton = () => {
+const ToggleButton = ({ handleDrawerToggle }) => {
   const StyledContainer = styled(Box)(() => ({
     display: 'flex',
     position: 'absolute',

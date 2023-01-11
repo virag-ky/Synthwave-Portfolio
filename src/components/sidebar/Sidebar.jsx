@@ -13,61 +13,59 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import Toolbar from '@mui/material/Toolbar';
-import {styled} from '@mui/material/styles'
+import { styled } from '@mui/material/styles';
 
 const Sidebar = () => {
-
-  const navIcons = [<HomeIcon/>, <AccountCircleIcon/>, <ConstructionIcon/>, <StarIcon/>, <EmailIcon/>];
+  const navIcons = [
+    <HomeIcon />,
+    <AccountCircleIcon />,
+    <ConstructionIcon />,
+    <StarIcon />,
+    <EmailIcon />,
+  ];
   const navTexts = ['Home', 'About', 'Skills', 'Projects', 'Contact'];
-  const socialIcons = [<GitHubIcon/>, <LinkedInIcon/>, <TwitterIcon/>];
+  const socialIcons = [<GitHubIcon />, <LinkedInIcon />, <TwitterIcon />];
   const socialTexts = ['GitHub', 'LinkedIn', 'Twitter'];
 
-  const StyledIcon = styled(ListItemIcon)(({theme}) => ({
+  const StyledIcon = styled(ListItemIcon)(({ theme }) => ({
     color: theme.palette.lightBlue,
   }));
 
-  const StyledText = styled(ListItemText)(({theme}) => ({
+  const StyledText = styled(ListItemText)(({ theme }) => ({
     color: theme.palette.lightBlue,
   }));
 
-  const StyledDivider = styled(Divider)(({theme}) => ({
+  const StyledDivider = styled(Divider)(({ theme }) => ({
     background: theme.palette.lightBlue,
   }));
 
   return (
-  <div>
-    <Toolbar />
-    <StyledDivider />
-    <List>
-      {
-        navTexts.map((text, id) => (
+    <div>
+      <Toolbar />
+      <StyledDivider />
+      <List>
+        {navTexts.map((text, id) => (
           <ListItem key={text} disablePadding>
-          <ListItemButton>
-            <StyledIcon>
-              {navIcons[id]}
-            </StyledIcon>
-            <StyledText primary={text} />
-          </ListItemButton>
-        </ListItem>
-        ))
-      }
-    </List>
-    <StyledDivider />
-    <List>
-     {
-      socialTexts.map((text, id) => (
-        <ListItem key={text} disablePadding>
-        <ListItemButton>
-          <StyledIcon>
-            {socialIcons[id]}
-          </StyledIcon>
-          <StyledText primary={text} />
-        </ListItemButton>
-      </ListItem>
-      ))
-     }
-    </List>
-  </div>
-)};
+            <ListItemButton>
+              <StyledIcon>{navIcons[id]}</StyledIcon>
+              <StyledText primary={text} />
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
+      <StyledDivider />
+      <List>
+        {socialTexts.map((text, id) => (
+          <ListItem key={text} disablePadding>
+            <ListItemButton>
+              <StyledIcon>{socialIcons[id]}</StyledIcon>
+              <StyledText primary={text} />
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
+    </div>
+  );
+};
 
 export default Sidebar;

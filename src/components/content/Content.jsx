@@ -4,12 +4,13 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Drawer from '@mui/material/Drawer';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import Sidebar from './Sidebar';
+import Sidebar from '../sidebar/Sidebar';
 import { createTheme, ThemeProvider } from '@mui/material';
+import ToggleButton from '../sidebar/ToggleButton';
+import { styled } from '@mui/material/styles';
 
 const Content = (props) => {
   const { window } = props;
-  const drawerWidth = 240;
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const handleDrawerToggle = () => setMobileOpen(!mobileOpen);
@@ -21,17 +22,41 @@ const Content = (props) => {
     palette: {
       lightBlue: '#1495ff',
     },
+    drawerPaper: {
+      boxSizing: 'border-box',
+      width: 240,
+      backgroundColor: '#00001c',
+    },
   });
+
+  const StyledNavContainer = styled(Box)(() => ({
+    width: { md: 240 },
+    flexShrink: { md: 0 },
+  }));
+
+  const NavDrawerMobile = styled(Drawer)(() => ({
+    display: { xs: 'block', md: 'none' },
+    '& .MuiDrawer-paper': theme.drawerPaper,
+  }));
+
+  const NavDrawerDesktop = styled(Drawer)(() => ({
+    display: { xs: 'none', md: 'block' },
+    '& .MuiDrawer-paper': theme.drawerPaper,
+  }));
+
+  const StyledMainBox = styled(Box)(() => ({
+    flexGrow: 1,
+    p: 3,
+    width: { sm: `calc(100% - 240px)` },
+  }));
 
   return (
     <>
       <CssBaseline />
+      <ToggleButton handleDrawerToggle={handleDrawerToggle} />
       <Box sx={{ display: 'flex' }}>
-        <Box
-          component="nav"
-          sx={{ width: { md: drawerWidth }, flexShrink: { md: 0 } }}
-        >
-          <Drawer
+        <StyledNavContainer component="nav">
+          <NavDrawerMobile
             container={container}
             variant="temporary"
             open={mobileOpen}
@@ -39,49 +64,23 @@ const Content = (props) => {
             ModalProps={{
               keepMounted: true,
             }}
-            sx={{
-              display: { xs: 'block', md: 'none' },
-              '& .MuiDrawer-paper': {
-                boxSizing: 'border-box',
-                width: drawerWidth,
-                backgroundColor: '#00001c',
-              },
-            }}
           >
             <ThemeProvider theme={theme}>
               <Sidebar />
             </ThemeProvider>
-          </Drawer>
-          <Drawer
-            variant="permanent"
-            sx={{
-              display: { xs: 'none', md: 'block' },
-              '& .MuiDrawer-paper': {
-                boxSizing: 'border-box',
-                width: drawerWidth,
-                backgroundColor: '#00001c',
-              },
-            }}
-            open
-          >
+          </NavDrawerMobile>
+          <NavDrawerDesktop variant="permanent" open>
             <ThemeProvider theme={theme}>
               <Sidebar />
             </ThemeProvider>
-          </Drawer>
-        </Box>
-        <Box
-          component="main"
-          sx={{
-            flexGrow: 1,
-            p: 3,
-            width: { sm: `calc(100% - ${drawerWidth}px)` },
-          }}
-        >
+          </NavDrawerDesktop>
+        </StyledNavContainer>
+        <StyledMainBox component="main">
           <Toolbar />
           <Typography sx={{ color: '#fff', textAlign: 'center' }} variant="h2">
             Virag Kormoczy
           </Typography>
-        </Box>
+        </StyledMainBox>
       </Box>
     </>
   );
