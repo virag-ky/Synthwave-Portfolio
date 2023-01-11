@@ -1,76 +1,19 @@
-import * as React from 'react';
+import { useState } from 'react';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
-import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import HomeIcon from '@mui/icons-material/Home';
-import StarIcon from '@mui/icons-material/Star';
-import EmailIcon from '@mui/icons-material/Email';
-import ConstructionIcon from '@mui/icons-material/Construction';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-
-const navIcons = [<HomeIcon/>, <AccountCircleIcon/>, <ConstructionIcon/>, <StarIcon/>, <EmailIcon/>];
-const navTexts = ['Home', 'About', 'Skills', 'Projects', 'Contact'];
-const socialIcons = [<GitHubIcon/>, <LinkedInIcon/>, <TwitterIcon/>];
-const socialTexts = ['GitHub', 'LinkedIn', 'Twitter'];
-
-const drawerWidth = 240;
+import Sidebar from './Sidebar';
 
 const Content = (props) => {
   const { window } = props;
-  const [mobileOpen, setMobileOpen] = React.useState(false);
+  const drawerWidth = 240;
+  const [mobileOpen, setMobileOpen] = useState(false);
 
-  const handleDrawerToggle = () => {
-    setMobileOpen(!mobileOpen);
-  };
-
-  const drawer = (
-    <div>
-      <Toolbar />
-      <Divider sx={{backgroundColor: '#1495ff'}} />
-      <List>
-        {
-          navTexts.map((text, id) => (
-            <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon sx={{color: '#1495ff'}}>
-                {navIcons[id]}
-              </ListItemIcon>
-              <ListItemText sx={{color: '#1495ff'}} primary={text} />
-            </ListItemButton>
-          </ListItem>
-          ))
-        }
-      </List>
-      <Divider sx={{backgroundColor: '#1495ff'}} />
-      <List>
-       {
-        socialTexts.map((text, id) => (
-          <ListItem key={text} disablePadding>
-          <ListItemButton>
-            <ListItemIcon sx={{color: '#1495ff'}}>
-              {socialIcons[id]}
-            </ListItemIcon>
-            <ListItemText sx={{color: '#1495ff'}} primary={text} />
-          </ListItemButton>
-        </ListItem>
-        ))
-       }
-      </List>
-    </div>
-  );
+  const handleDrawerToggle = () => setMobileOpen(!mobileOpen);
 
   const container = window !== undefined ? () => window().document.body : undefined;
 
@@ -106,7 +49,7 @@ const Content = (props) => {
             '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth }
           }}
         >
-          {drawer}
+        <Sidebar/>
         </Drawer>
         <Drawer
           variant="permanent"
@@ -116,7 +59,7 @@ const Content = (props) => {
           }}
           open
         >
-          {drawer}
+        <Sidebar/>
         </Drawer>
       </Box>
       <Box
