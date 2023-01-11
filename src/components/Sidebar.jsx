@@ -13,6 +13,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import Toolbar from '@mui/material/Toolbar';
+import {styled} from '@mui/material/styles'
 
 const Sidebar = () => {
 
@@ -21,34 +22,46 @@ const Sidebar = () => {
   const socialIcons = [<GitHubIcon/>, <LinkedInIcon/>, <TwitterIcon/>];
   const socialTexts = ['GitHub', 'LinkedIn', 'Twitter'];
 
+  const StyledIcon = styled(ListItemIcon)(({theme}) => ({
+    color: theme.palette.lightBlue,
+  }));
+
+  const StyledText = styled(ListItemText)(({theme}) => ({
+    color: theme.palette.lightBlue,
+  }));
+
+  const StyledDivider = styled(Divider)(({theme}) => ({
+    background: theme.palette.lightBlue,
+  }));
+
   return (
   <div>
     <Toolbar />
-    <Divider sx={{backgroundColor: '#1495ff'}} />
+    <StyledDivider />
     <List>
       {
         navTexts.map((text, id) => (
           <ListItem key={text} disablePadding>
           <ListItemButton>
-            <ListItemIcon sx={{color: '#1495ff'}}>
+            <StyledIcon>
               {navIcons[id]}
-            </ListItemIcon>
-            <ListItemText sx={{color: '#1495ff'}} primary={text} />
+            </StyledIcon>
+            <StyledText primary={text} />
           </ListItemButton>
         </ListItem>
         ))
       }
     </List>
-    <Divider sx={{backgroundColor: '#1495ff'}} />
+    <StyledDivider />
     <List>
      {
       socialTexts.map((text, id) => (
         <ListItem key={text} disablePadding>
         <ListItemButton>
-          <ListItemIcon sx={{color: '#1495ff'}}>
+          <StyledIcon>
             {socialIcons[id]}
-          </ListItemIcon>
-          <ListItemText sx={{color: '#1495ff'}} primary={text} />
+          </StyledIcon>
+          <StyledText primary={text} />
         </ListItemButton>
       </ListItem>
       ))
