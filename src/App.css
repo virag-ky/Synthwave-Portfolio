@@ -7,6 +7,8 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
+  width: calc(100% - 238px);
+  margin-left: auto;
 }
 
 #social-icons-container {
@@ -27,4 +29,10 @@
   border: solid #fff;
   height: 800px;
   width: 50%;
+}
+
+@media (max-width: 1199px) {
+  #main {
+    width: 100%;
+  }
 }

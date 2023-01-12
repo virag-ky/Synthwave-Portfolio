@@ -76,9 +76,6 @@ const Content = (props) => {
           </Drawer>
         </StyledNavContainer>
         <ToggleButton handleDrawerToggle={handleDrawerToggle} />
-        {/* <StyledMainBox component="main">
-          <ToggleButton handleDrawerToggle={handleDrawerToggle} />
-        </StyledMainBox> */}
       </Box>
     </div>
   );
