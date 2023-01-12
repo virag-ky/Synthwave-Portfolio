@@ -1,6 +1,6 @@
 const Intro = () => {
   return (
-    <div class="pages">
+    <div className="pages">
       <h2>Intro</h2>
     </div>
   );

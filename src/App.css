@@ -1,8 +1,11 @@
-main {
+#main {
   background: url('./assets/header-bg.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
 }
 
@@ -17,4 +20,11 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.pages {
+  color: #fff;
+  border: solid #fff;
+  height: 800px;
+  width: 50%;
 }

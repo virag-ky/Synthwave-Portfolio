@@ -2,7 +2,6 @@ import { useState } from 'react';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
 import Drawer from '@mui/material/Drawer';
-import Typography from '@mui/material/Typography';
 import Sidebar from '../sidebar/Sidebar';
 import { createTheme, ThemeProvider } from '@mui/material';
 import ToggleButton from '../sidebar/ToggleButton';
@@ -41,12 +40,6 @@ const Content = (props) => {
     '& .MuiDrawer-paper': theme.drawerPaper,
   }));
 
-  const StyledMainBox = styled(Box)(() => ({
-    flexGrow: 1,
-    p: 3,
-    width: { lg: 'calc(100% - 240px)' },
-  }));
-
   return (
     <div>
       <Box sx={{ display: 'flex' }}>
@@ -82,12 +75,10 @@ const Content = (props) => {
             </ThemeProvider>
           </Drawer>
         </StyledNavContainer>
-        <StyledMainBox component="main">
+        <ToggleButton handleDrawerToggle={handleDrawerToggle} />
+        {/* <StyledMainBox component="main">
           <ToggleButton handleDrawerToggle={handleDrawerToggle} />
-          {/* <Typography sx={{ color: '#fff', textAlign: 'center' }} variant="h2">
-            Virag Kormoczy
-          </Typography> */}
-        </StyledMainBox>
+        </StyledMainBox> */}
       </Box>
     </div>
   );

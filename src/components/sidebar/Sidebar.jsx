@@ -10,8 +10,11 @@ import profile from '../../assets/profile2.jpg';
 import Link from '@mui/material/Link';
 import { NavLinks } from './Links';
 import { SocialLinks } from './Links';
+import { useNavigate } from 'react-router-dom';
 
 const Sidebar = () => {
+  const navigate = useNavigate();
+
   const StyledIcon = styled(ListItemIcon)(({ theme }) => ({
     color: theme.palette.lightBlue,
   }));
@@ -49,20 +52,23 @@ const Sidebar = () => {
           />
         </Toolbar>
         <List>
-          {navTexts.map((text, id) => (
-            <StyledListItem key={text}>
+          {NavLinks.map((navLink) => (
+            <StyledListItem
+              onClick={() => navigate(navLink.route)}
+              key={navLink.id}
+            >
               <StyledListButton>
-                <StyledIcon>{navIcons[id]}</StyledIcon>
-                <StyledText>{text}</StyledText>
+                <StyledIcon>{navLink.icon}</StyledIcon>
+                <StyledText>{navLink.label}</StyledText>
               </StyledListButton>
             </StyledListItem>
           ))}
         </List>
       </div>
       <div id="social-icons-container">
-        {SocialIcons.map((icon, id) => (
-          <Link href={socialLinks[id]} target="_blank">
-            <StyledIconButton key={id}>{icon}</StyledIconButton>
+        {SocialLinks.map((link) => (
+          <Link key={link.id} href={link.link} target="_blank">
+            <StyledIconButton>{link.icon}</StyledIconButton>
           </Link>
         ))}
       </div>
