@@ -23,7 +23,7 @@ const Sidebar = () => {
     <EmailIcon />,
   ];
 
-  const SocialIcons = [<GitHubIcon />, <TwitterIcon />, <LinkedInIcon />, 'M'];
+  const SocialIcons = [<GitHubIcon />, <TwitterIcon />, <LinkedInIcon />];
 
   const navTexts = ['Intro', 'About', 'Skills', 'Projects', 'Contact'];
 
@@ -64,8 +64,10 @@ const Sidebar = () => {
         </List>
       </div>
       <div id="social-icons-container">
-        {SocialIcons.map((icon) => (
-          <IconButton sx={{ color: '#1495ff' }}>{icon}</IconButton>
+        {SocialIcons.map((icon, id) => (
+          <IconButton key={id} sx={{ color: '#1495ff' }}>
+            {icon}
+          </IconButton>
         ))}
       </div>
     </div>

@@ -2,7 +2,6 @@ import { useState } from 'react';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
 import Drawer from '@mui/material/Drawer';
-import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Sidebar from '../sidebar/Sidebar';
 import { createTheme, ThemeProvider } from '@mui/material';
@@ -42,23 +41,17 @@ const Content = (props) => {
     '& .MuiDrawer-paper': theme.drawerPaper,
   }));
 
-  const NavDrawerDesktop = styled(Drawer)(() => ({
-    display: { xs: 'none', md: 'block' },
-    '& .MuiDrawer-paper': theme.drawerPaper,
-  }));
-
   const StyledMainBox = styled(Box)(() => ({
     flexGrow: 1,
     p: 3,
-    width: { sm: `calc(100% - 240px)` },
+    width: { sm: 'calc(100% - 240px)' },
   }));
 
   return (
-    <>
-      <CssBaseline />
-      <ToggleButton handleDrawerToggle={handleDrawerToggle} />
+    <div>
       <Box sx={{ display: 'flex' }}>
-        <StyledNavContainer component="nav">
+        <CssBaseline />
+        <StyledNavContainer component="nav" aria-label="nav icons">
           <NavDrawerMobile
             container={container}
             variant="temporary"
@@ -72,20 +65,31 @@ const Content = (props) => {
               <Sidebar />
             </ThemeProvider>
           </NavDrawerMobile>
-          <NavDrawerDesktop variant="permanent" open>
+          <Drawer
+            variant="permanent"
+            sx={{
+              display: { xs: 'none', sm: 'block' },
+              '& .MuiDrawer-paper': {
+                boxSizing: 'border-box',
+                width: 240,
+                background: theme.drawerPaper.backgroundColor,
+              },
+            }}
+            open
+          >
             <ThemeProvider theme={theme}>
               <Sidebar />
             </ThemeProvider>
-          </NavDrawerDesktop>
+          </Drawer>
         </StyledNavContainer>
         <StyledMainBox component="main">
-          <Toolbar />
+          <ToggleButton handleDrawerToggle={handleDrawerToggle} />
           <Typography sx={{ color: '#fff', textAlign: 'center' }} variant="h2">
             Virag Kormoczy
           </Typography>
         </StyledMainBox>
       </Box>
-    </>
+    </div>
   );
 };
 
