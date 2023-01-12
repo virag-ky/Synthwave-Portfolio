@@ -15,6 +15,7 @@ import { styled } from '@mui/material/styles';
 import { IconButton } from '@mui/material';
 import Avatar from '@mui/material/Avatar';
 import profile from '../../assets/profile2.jpg';
+import Link from '@mui/material/Link';
 
 const Sidebar = () => {
   const navIcons = [
@@ -29,6 +30,12 @@ const Sidebar = () => {
     <GitHubIcon sx={{ fontSize: '28px' }} />,
     <TwitterIcon sx={{ fontSize: '28px' }} />,
     <LinkedInIcon sx={{ fontSize: '28px' }} />,
+  ];
+
+  const socialLinks = [
+    'https://github.com/virag-ky',
+    'https://twitter.com/Virag_Ky',
+    'https://www.linkedin.com/in/virag-kormoczy/',
   ];
 
   const navTexts = ['Intro', 'About', 'Skills', 'Projects', 'Contact'];
@@ -77,15 +84,17 @@ const Sidebar = () => {
       </div>
       <div id="social-icons-container">
         {SocialIcons.map((icon, id) => (
-          <IconButton
-            key={id}
-            sx={{
-              color: '#1495ff',
-              '&:hover': { boxShadow: '0 0 30px #f65ee0', color: '#f65ee0' },
-            }}
-          >
-            {icon}
-          </IconButton>
+          <Link href={socialLinks[id]} target="_blank">
+            <IconButton
+              key={id}
+              sx={{
+                color: '#1495ff',
+                '&:hover': { boxShadow: '0 0 30px #f65ee0', color: '#f65ee0' },
+              }}
+            >
+              {icon}
+            </IconButton>
+          </Link>
         ))}
       </div>
     </div>
