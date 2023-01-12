@@ -2,44 +2,16 @@ import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
-import HomeIcon from '@mui/icons-material/Home';
-import StarIcon from '@mui/icons-material/Star';
-import EmailIcon from '@mui/icons-material/Email';
-import ConstructionIcon from '@mui/icons-material/Construction';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import Toolbar from '@mui/material/Toolbar';
 import { styled } from '@mui/material/styles';
 import { IconButton } from '@mui/material';
 import Avatar from '@mui/material/Avatar';
 import profile from '../../assets/profile2.jpg';
 import Link from '@mui/material/Link';
+import { NavLinks } from './Links';
+import { SocialLinks } from './Links';
 
 const Sidebar = () => {
-  const navIcons = [
-    <HomeIcon sx={{ fontSize: '32px' }} />,
-    <AccountCircleIcon sx={{ fontSize: '30px' }} />,
-    <ConstructionIcon sx={{ fontSize: '32px' }} />,
-    <StarIcon sx={{ fontSize: '32px' }} />,
-    <EmailIcon sx={{ fontSize: '30px' }} />,
-  ];
-
-  const SocialIcons = [
-    <GitHubIcon sx={{ fontSize: '28px' }} />,
-    <TwitterIcon sx={{ fontSize: '28px' }} />,
-    <LinkedInIcon sx={{ fontSize: '28px' }} />,
-  ];
-
-  const socialLinks = [
-    'https://github.com/virag-ky',
-    'https://twitter.com/Virag_Ky',
-    'https://www.linkedin.com/in/virag-kormoczy/',
-  ];
-
-  const navTexts = ['Intro', 'About', 'Skills', 'Projects', 'Contact'];
-
   const StyledIcon = styled(ListItemIcon)(({ theme }) => ({
     color: theme.palette.lightBlue,
   }));
