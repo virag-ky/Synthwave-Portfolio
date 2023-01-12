@@ -13,17 +13,23 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import Toolbar from '@mui/material/Toolbar';
 import { styled } from '@mui/material/styles';
 import { IconButton } from '@mui/material';
+import Avatar from '@mui/material/Avatar';
+import profile from '../../assets/profile2.jpg';
 
 const Sidebar = () => {
   const navIcons = [
-    <HomeIcon />,
-    <AccountCircleIcon />,
-    <ConstructionIcon />,
-    <StarIcon />,
-    <EmailIcon />,
+    <HomeIcon sx={{ fontSize: '32px' }} />,
+    <AccountCircleIcon sx={{ fontSize: '30px' }} />,
+    <ConstructionIcon sx={{ fontSize: '32px' }} />,
+    <StarIcon sx={{ fontSize: '32px' }} />,
+    <EmailIcon sx={{ fontSize: '30px' }} />,
   ];
 
-  const SocialIcons = [<GitHubIcon />, <TwitterIcon />, <LinkedInIcon />];
+  const SocialIcons = [
+    <GitHubIcon sx={{ fontSize: '28px' }} />,
+    <TwitterIcon sx={{ fontSize: '28px' }} />,
+    <LinkedInIcon sx={{ fontSize: '28px' }} />,
+  ];
 
   const navTexts = ['Intro', 'About', 'Skills', 'Projects', 'Contact'];
 
@@ -51,7 +57,13 @@ const Sidebar = () => {
   return (
     <div id="nav-icons-container">
       <div>
-        <Toolbar />
+        <Toolbar sx={{ padding: '50px 20px' }}>
+          <Avatar
+            alt="Virag Kormoczy"
+            src={profile}
+            sx={{ width: '80px', height: 'auto' }}
+          />
+        </Toolbar>
         <List>
           {navTexts.map((text, id) => (
             <StyledListItem key={text}>
