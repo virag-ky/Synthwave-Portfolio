@@ -32,19 +32,19 @@ const Content = (props) => {
   });
 
   const StyledNavContainer = styled(Box)(() => ({
-    width: { md: 240 },
-    flexShrink: { md: 0 },
+    width: { lg: 240 },
+    flexShrink: { lg: 0 },
   }));
 
   const NavDrawerMobile = styled(Drawer)(() => ({
-    display: { xs: 'block', md: 'none' },
+    display: { sx: 'block', lg: 'none' },
     '& .MuiDrawer-paper': theme.drawerPaper,
   }));
 
   const StyledMainBox = styled(Box)(() => ({
     flexGrow: 1,
     p: 3,
-    width: { sm: 'calc(100% - 240px)' },
+    width: { lg: 'calc(100% - 240px)' },
   }));
 
   return (
@@ -68,7 +68,7 @@ const Content = (props) => {
           <Drawer
             variant="permanent"
             sx={{
-              display: { xs: 'none', sm: 'block' },
+              display: { xs: 'none', sm: 'none', md: 'none', lg: 'block' },
               '& .MuiDrawer-paper': {
                 boxSizing: 'border-box',
                 width: 240,

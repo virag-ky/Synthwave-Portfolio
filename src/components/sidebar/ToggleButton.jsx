@@ -17,7 +17,7 @@ const ToggleButton = ({ handleDrawerToggle }) => {
         aria-label="open drawer"
         edge="start"
         onClick={handleDrawerToggle}
-        sx={{ mr: 2, display: { md: 'none' } }}
+        sx={{ mr: 2, display: { lg: 'none' } }}
       >
         <MenuIcon sx={{ color: '#fff' }} />
       </IconButton>

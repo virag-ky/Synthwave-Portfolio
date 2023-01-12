@@ -77,7 +77,13 @@ const Sidebar = () => {
       </div>
       <div id="social-icons-container">
         {SocialIcons.map((icon, id) => (
-          <IconButton key={id} sx={{ color: '#1495ff' }}>
+          <IconButton
+            key={id}
+            sx={{
+              color: '#1495ff',
+              '&:hover': { boxShadow: '0 0 30px #f65ee0', color: '#f65ee0' },
+            }}
+          >
             {icon}
           </IconButton>
         ))}
