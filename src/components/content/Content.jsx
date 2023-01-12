@@ -84,9 +84,9 @@ const Content = (props) => {
         </StyledNavContainer>
         <StyledMainBox component="main">
           <ToggleButton handleDrawerToggle={handleDrawerToggle} />
-          <Typography sx={{ color: '#fff', textAlign: 'center' }} variant="h2">
+          {/* <Typography sx={{ color: '#fff', textAlign: 'center' }} variant="h2">
             Virag Kormoczy
-          </Typography>
+          </Typography> */}
         </StyledMainBox>
       </Box>
     </div>

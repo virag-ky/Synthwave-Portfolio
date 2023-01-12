@@ -44,6 +44,11 @@ const Sidebar = () => {
     color: theme.palette.lightBlue,
   }));
 
+  const StyledIconButton = styled(IconButton)(() => ({
+    color: '#1495ff',
+    '&:hover': { boxShadow: '0 0 30px #f65ee0', color: '#f65ee0' },
+  }));
+
   const StyledText = styled('span')(() => ({
     color: '#1877F2',
     textAlign: 'right',
@@ -85,15 +90,7 @@ const Sidebar = () => {
       <div id="social-icons-container">
         {SocialIcons.map((icon, id) => (
           <Link href={socialLinks[id]} target="_blank">
-            <IconButton
-              key={id}
-              sx={{
-                color: '#1495ff',
-                '&:hover': { boxShadow: '0 0 30px #f65ee0', color: '#f65ee0' },
-              }}
-            >
-              {icon}
-            </IconButton>
+            <StyledIconButton key={id}>{icon}</StyledIconButton>
           </Link>
         ))}
       </div>
