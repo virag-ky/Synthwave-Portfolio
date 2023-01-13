@@ -3,9 +3,8 @@ import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
 import Drawer from '@mui/material/Drawer';
 import Sidebar from '../sidebar/Sidebar';
-import { createTheme, ThemeProvider } from '@mui/material';
 import ToggleButton from '../sidebar/ToggleButton';
-import { styled } from '@mui/material/styles';
+import { styles } from './contentStyles';
 
 const Content = (props) => {
   const { window } = props;
@@ -16,36 +15,12 @@ const Content = (props) => {
   const container =
     window !== undefined ? () => window().document.body : undefined;
 
-  const theme = createTheme({
-    palette: {
-      lightBlue: '#1495ff',
-    },
-    drawerPaper: {
-      boxSizing: 'border-box',
-      width: 240,
-      backgroundColor: '#00001c',
-    },
-    font: {
-      size: '20px',
-    },
-  });
-
-  const StyledNavContainer = styled(Box)(() => ({
-    width: { lg: 240 },
-    flexShrink: { lg: 0 },
-  }));
-
-  const NavDrawerMobile = styled(Drawer)(() => ({
-    display: { sx: 'block', lg: 'none' },
-    '& .MuiDrawer-paper': theme.drawerPaper,
-  }));
-
   return (
     <div>
-      <Box sx={{ display: 'flex' }}>
+      <Box sx={styles.boxContainer}>
         <CssBaseline />
-        <StyledNavContainer component="nav" aria-label="nav icons">
-          <NavDrawerMobile
+        <Box sx={styles.navContainer} component="nav" aria-label="nav icons">
+          <Drawer
             container={container}
             variant="temporary"
             open={mobileOpen}
@@ -53,28 +28,14 @@ const Content = (props) => {
             ModalProps={{
               keepMounted: true,
             }}
+            sx={styles.navDrawer.mobile}
           >
-            <ThemeProvider theme={theme}>
-              <Sidebar />
-            </ThemeProvider>
-          </NavDrawerMobile>
-          <Drawer
-            variant="permanent"
-            sx={{
-              display: { xs: 'none', sm: 'none', md: 'none', lg: 'block' },
-              '& .MuiDrawer-paper': {
-                boxSizing: 'border-box',
-                width: 240,
-                background: theme.drawerPaper.backgroundColor,
-              },
-            }}
-            open
-          >
-            <ThemeProvider theme={theme}>
-              <Sidebar />
-            </ThemeProvider>
+            <Sidebar />
           </Drawer>
-        </StyledNavContainer>
+          <Drawer variant="permanent" sx={styles.navDrawer.desktop} open>
+            <Sidebar />
+          </Drawer>
+        </Box>
         <ToggleButton handleDrawerToggle={handleDrawerToggle} />
       </Box>
     </div>

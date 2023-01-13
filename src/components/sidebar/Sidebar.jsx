@@ -3,72 +3,45 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import Toolbar from '@mui/material/Toolbar';
-import { styled } from '@mui/material/styles';
-import { IconButton } from '@mui/material';
+import { IconButton, Typography } from '@mui/material';
 import Avatar from '@mui/material/Avatar';
 import profile from '../../assets/profile2.jpg';
 import Link from '@mui/material/Link';
-import { NavLinks } from './Links';
-import { SocialLinks } from './Links';
+import { NavLinks } from './links';
+import { SocialLinks } from './links';
 import { useNavigate } from 'react-router-dom';
+import { styles } from './sidebarStyles';
 
 const Sidebar = () => {
   const navigate = useNavigate();
 
-  const StyledIcon = styled(ListItemIcon)(({ theme }) => ({
-    color: theme.palette.lightBlue,
-  }));
-
-  const StyledIconButton = styled(IconButton)(() => ({
-    color: '#1495ff',
-    '&:hover': { boxShadow: '0 0 30px #f65ee0', color: '#f65ee0' },
-  }));
-
-  const StyledText = styled('span')(() => ({
-    color: '#1877F2',
-    textAlign: 'right',
-    fontSize: '18px',
-    letterSpacing: '1px',
-  }));
-
-  const StyledListItem = styled(ListItem)(() => ({
-    padding: '8px 5px',
-    '&:hover': { background: '#0C2340' },
-  }));
-
-  const StyledListButton = styled(ListItemButton)(() => ({
-    display: 'flex',
-    justifyContent: 'space-between',
-  }));
-
   return (
     <div id="nav-icons-container">
       <div>
-        <Toolbar sx={{ padding: '50px 20px' }}>
-          <Avatar
-            alt="Virag Kormoczy"
-            src={profile}
-            sx={{ width: '80px', height: 'auto' }}
-          />
+        <Toolbar sx={styles.toolbar}>
+          <Avatar alt="Virag Kormoczy" src={profile} sx={styles.avatar} />
         </Toolbar>
         <List>
           {NavLinks.map((navLink) => (
-            <StyledListItem
+            <ListItem
+              sx={styles.listItem}
               onClick={() => navigate(navLink.route)}
               key={navLink.id}
             >
-              <StyledListButton>
-                <StyledIcon>{navLink.icon}</StyledIcon>
-                <StyledText>{navLink.label}</StyledText>
-              </StyledListButton>
-            </StyledListItem>
+              <ListItemButton sx={styles.listItemButton}>
+                <ListItemIcon sx={styles.icon}>{navLink.icon}</ListItemIcon>
+                <Typography variant="span" sx={styles.span}>
+                  {navLink.label}
+                </Typography>
+              </ListItemButton>
+            </ListItem>
           ))}
         </List>
       </div>
       <div id="social-icons-container">
         {SocialLinks.map((link) => (
           <Link key={link.id} href={link.link} target="_blank">
-            <StyledIconButton>{link.icon}</StyledIconButton>
+            <IconButton sx={styles.iconButton}>{link.icon}</IconButton>
           </Link>
         ))}
       </div>
