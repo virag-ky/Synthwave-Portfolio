@@ -48,4 +48,17 @@ export const styles = {
   menuIcon: {
     color: '#fff',
   },
+
+  navLinksContainer: {
+    height: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+  },
+
+  socialLinksContainer: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    padding: '20px 15px',
+  },
 };

@@ -4,7 +4,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Drawer from '@mui/material/Drawer';
 import Sidebar from '../sidebar/Sidebar';
 import ToggleButton from '../sidebar/ToggleButton';
-import { styles } from './contentStyles';
+import { styles } from '../../styles/contentStyles';
 
 const Content = (props) => {
   const { window } = props;

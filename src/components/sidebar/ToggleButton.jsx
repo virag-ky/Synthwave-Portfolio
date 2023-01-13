@@ -1,7 +1,7 @@
 import { Box } from '@mui/material';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
-import { styles } from './sidebarStyles';
+import { styles } from '../../styles/sidebarStyles';
 
 const ToggleButton = ({ handleDrawerToggle }) => {
   return (

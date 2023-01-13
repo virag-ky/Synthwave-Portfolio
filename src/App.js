@@ -1,14 +1,16 @@
 import './App.css';
 import Content from './components/content/Content';
 import { Outlet } from 'react-router-dom';
+import { styles } from './styles/mainContainerStyles';
+import { Box } from '@mui/material';
 
 const App = () => {
   return (
     <div id="App">
       <Content />
-      <main id="main">
+      <Box sx={styles}>
         <Outlet />
-      </main>
+      </Box>
     </div>
   );
 };

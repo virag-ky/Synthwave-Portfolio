@@ -3,20 +3,20 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import Toolbar from '@mui/material/Toolbar';
-import { IconButton, Typography } from '@mui/material';
+import { IconButton, Typography, Box } from '@mui/material';
 import Avatar from '@mui/material/Avatar';
 import profile from '../../assets/profile2.jpg';
 import Link from '@mui/material/Link';
 import { NavLinks } from './links';
 import { SocialLinks } from './links';
 import { useNavigate } from 'react-router-dom';
-import { styles } from './sidebarStyles';
+import { styles } from '../../styles/sidebarStyles';
 
 const Sidebar = () => {
   const navigate = useNavigate();
 
   return (
-    <div id="nav-icons-container">
+    <Box sx={styles.navLinksContainer}>
       <div>
         <Toolbar sx={styles.toolbar}>
           <Avatar alt="Virag Kormoczy" src={profile} sx={styles.avatar} />
@@ -38,14 +38,14 @@ const Sidebar = () => {
           ))}
         </List>
       </div>
-      <div id="social-icons-container">
+      <Box sx={styles.socialLinksContainer}>
         {SocialLinks.map((link) => (
           <Link key={link.id} href={link.link} target="_blank">
             <IconButton sx={styles.iconButton}>{link.icon}</IconButton>
           </Link>
         ))}
-      </div>
-    </div>
+      </Box>
+    </Box>
   );
 };
 

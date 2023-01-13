@@ -1,38 +1,6 @@
-#main {
-  background: url('./assets/header-bg.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  width: calc(100% - 238px);
-  margin-left: auto;
-}
-
-#social-icons-container {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 15px;
-}
-
-#nav-icons-container {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
 .pages {
   color: #fff;
   border: solid #fff;
   height: 800px;
   width: 50%;
-}
-
-@media (max-width: 1199px) {
-  #main {
-    width: 100%;
-  }
 }
