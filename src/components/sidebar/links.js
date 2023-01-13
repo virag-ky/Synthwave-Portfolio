@@ -10,31 +10,31 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 export const NavLinks = [
   {
     id: 0,
-    icon: <HomeIcon sx={{ fontSize: '32px' }} />,
+    icon: <HomeIcon sx={{ fontSize: { lg: '32px', xs: '25px' } }} />,
     label: 'Intro',
     route: 'intro',
   },
   {
     id: 1,
-    icon: <AccountCircleIcon sx={{ fontSize: '30px' }} />,
+    icon: <AccountCircleIcon sx={{ fontSize: { lg: '30px', xs: '25px' } }} />,
     label: 'About',
     route: 'about',
   },
   {
     id: 2,
-    icon: <ConstructionIcon sx={{ fontSize: '32px' }} />,
+    icon: <ConstructionIcon sx={{ fontSize: { lg: '32px', xs: '25px' } }} />,
     label: 'Skills',
     route: 'skills',
   },
   {
     id: 3,
-    icon: <StarIcon sx={{ fontSize: '32px' }} />,
+    icon: <StarIcon sx={{ fontSize: { lg: '32px', xs: '25px' } }} />,
     label: 'Projects',
     route: 'projects',
   },
   {
     id: 4,
-    icon: <EmailIcon sx={{ fontSize: '30px' }} />,
+    icon: <EmailIcon sx={{ fontSize: { lg: '30px', xs: '23px' } }} />,
     label: 'Contact',
     route: 'contact',
   },
@@ -43,17 +43,17 @@ export const NavLinks = [
 export const SocialLinks = [
   {
     id: 0,
-    icon: <GitHubIcon sx={{ fontSize: '28px' }} />,
+    icon: <GitHubIcon sx={{ fontSize: { lg: '28px', xs: '25px' } }} />,
     link: 'https://github.com/virag-ky',
   },
   {
     id: 1,
-    icon: <TwitterIcon sx={{ fontSize: '28px' }} />,
+    icon: <TwitterIcon sx={{ fontSize: { lg: '28px', xs: '25px' } }} />,
     link: 'https://twitter.com/Virag_Ky',
   },
   {
     id: 2,
-    icon: <LinkedInIcon sx={{ fontSize: '28px' }} />,
+    icon: <LinkedInIcon sx={{ fontSize: { lg: '28px', xs: '25px' } }} />,
     link: 'https://www.linkedin.com/in/virag-kormoczy/',
   },
 ];

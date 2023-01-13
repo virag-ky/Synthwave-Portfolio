@@ -22,7 +22,7 @@ export const styles = {
       '& .MuiDrawer-paper': {
         display: { sx: 'block', lg: 'none' },
         boxSizing: 'border-box',
-        width: 240,
+        width: { xs: 180, sm: 220 },
         backgroundColor: '#00001c',
       },
     },

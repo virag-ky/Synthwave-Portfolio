@@ -21,12 +21,12 @@ export const styles = {
   span: {
     color: '#1877F2',
     textAlign: 'right',
-    fontSize: '18px',
+    fontSize: { lg: '18px', sm: '16px' },
     letterSpacing: '1px',
   },
 
   avatar: {
-    width: '80px',
+    width: { lg: '80px', sm: '50px' },
     height: 'auto',
   },
 
@@ -47,6 +47,7 @@ export const styles = {
 
   menuIcon: {
     color: '#fff',
+    fontSize: '32px',
   },
 
   navLinksContainer: {
