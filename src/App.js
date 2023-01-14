@@ -1,4 +1,3 @@
-import './App.css';
 import Content from './components/content/Content';
 import { Outlet } from 'react-router-dom';
 import { styles } from './styles/mainContainerStyles';
