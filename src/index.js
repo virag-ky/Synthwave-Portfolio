@@ -7,6 +7,8 @@ import Projects from './components/content/pages/Projects';
 import Skills from './components/content/pages/Skills';
 import Contact from './components/content/pages/Contact';
 import AboutMe from './components/content/pages/AboutMe';
+import { ThemeProvider } from '@mui/material/styles';
+import { portfolioTheme } from './portfolioTheme';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -45,6 +47,8 @@ const router = createBrowserRouter([
 
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <ThemeProvider theme={portfolioTheme}>
+      <RouterProvider router={router} />
+    </ThemeProvider>
   </React.StrictMode>
 );

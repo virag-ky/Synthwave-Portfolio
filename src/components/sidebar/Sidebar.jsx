@@ -17,7 +17,7 @@ const Sidebar = () => {
 
   return (
     <Box sx={styles.navLinksContainer}>
-      <div>
+      <Box>
         <Toolbar sx={styles.toolbar}>
           <Avatar alt="Virag Kormoczy" src={profile} sx={styles.avatar} />
         </Toolbar>
@@ -37,7 +37,7 @@ const Sidebar = () => {
             </ListItem>
           ))}
         </List>
-      </div>
+      </Box>
       <Box sx={styles.socialLinksContainer}>
         {SocialLinks.map((link) => (
           <Link key={link.id} href={link.link} target="_blank">

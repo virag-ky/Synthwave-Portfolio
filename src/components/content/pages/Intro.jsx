@@ -1,8 +1,11 @@
+import { Typography, Box } from '@mui/material';
+
 const Intro = () => {
   return (
-    <div className="pages">
-      <h2>Intro</h2>
-    </div>
+    <Box className="pages">
+      <Typography variant="h1">Virag Kormoczy</Typography>
+      <Typography variant="h2">Full-Stack Web Developer</Typography>
+    </Box>
   );
 };
 
