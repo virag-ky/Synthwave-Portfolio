@@ -11,4 +11,7 @@ export const styles = {
   height: '100vh',
   width: { lg: 'calc(100% - 238px)', md: '100%' },
   marginLeft: 'auto',
+  '@media (max-width: 600px)': {
+    overflow: 'scroll',
+  },
 };

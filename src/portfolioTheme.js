@@ -20,5 +20,14 @@ export const portfolioTheme = createTheme({
 
   typography: {
     fontFamily: 'Orbitron',
+    body1: {
+      fontFamily: 'Oxygen',
+      color: 'rgba(250, 250, 250, 0.9)',
+    },
+    h2: {
+      color: '#00001c',
+      fontSize: '2.2rem',
+      fontWeight: 700,
+    },
   },
 });
