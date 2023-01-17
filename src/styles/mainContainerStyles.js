@@ -11,7 +11,9 @@ export const styles = {
   height: '100vh',
   width: { lg: 'calc(100% - 238px)', md: '100%' },
   marginLeft: 'auto',
-  '@media (max-width: 600px)': {
+  '@media (max-width: 1200px)': {
     overflow: 'scroll',
+    height: 'auto',
+    backgroundAttachment: 'fixed',
   },
 };

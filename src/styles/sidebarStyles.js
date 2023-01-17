@@ -43,6 +43,7 @@ export const styles = {
   toggleButton: {
     mr: 2,
     display: { lg: 'none' },
+    position: 'fixed',
   },
 
   menuIcon: {
