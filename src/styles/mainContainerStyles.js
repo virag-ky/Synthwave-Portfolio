@@ -12,8 +12,8 @@ export const styles = {
   width: { lg: 'calc(100% - 238px)', md: '100%' },
   marginLeft: 'auto',
   '@media (max-width: 1200px)': {
-    overflow: 'scroll',
     height: 'auto',
+    minHeight: '100vh',
     backgroundAttachment: 'fixed',
   },
 };

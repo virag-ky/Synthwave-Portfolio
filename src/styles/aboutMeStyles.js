@@ -5,7 +5,7 @@ export const styles = {
     width: '95vw',
     height: 'auto',
     maxHeight: 'unset',
-    margin: '50px 0',
+    margin: '80px 0 50px 0',
   },
   height: '85vh',
   maxHeight: '1000px',
