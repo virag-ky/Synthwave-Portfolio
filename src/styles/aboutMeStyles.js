@@ -6,7 +6,8 @@ export const styles = {
   },
   height: '85vh',
   maxHeight: '1000px',
-  background: 'rgba(0, 0, 28, 0.9)',
+  background: 'rgba(0, 0, 28, 0.8)',
+  backdropFilter: 'blur(12px)',
   padding: '30px',
   borderRadius: '25px',
   display: 'flex',
@@ -29,7 +30,7 @@ export const styles = {
     },
   },
   p: {
-    fontSize: '1.3rem',
+    fontSize: '1.2rem',
     lineHeight: '1.6',
     '@media (min-width: 601px) and (max-width: 1200px)': {
       fontSize: '1.2rem',
@@ -37,5 +38,8 @@ export const styles = {
     '@media (max-width: 600px)': {
       fontSize: '1rem',
     },
+  },
+  span: {
+    color: '#1495ff',
   },
 };

@@ -26,7 +26,7 @@ export const portfolioTheme = createTheme({
     },
     h2: {
       color: '#00001c',
-      fontSize: '2.2rem',
+      fontSize: '1.8rem',
       fontWeight: 700,
     },
   },
