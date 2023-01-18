@@ -5,12 +5,12 @@ export const portfolioTheme = createTheme({
     MuiTypography: {
       defaultProps: {
         variantMapping: {
-          h1: 'h2',
+          h1: 'h1',
           h2: 'h2',
-          h3: 'h2',
-          h4: 'h2',
-          h5: 'h2',
-          h6: 'h2',
+          h3: 'h3',
+          h4: 'h4',
+          h5: 'h5',
+          h6: 'h6',
           body1: 'p',
           body2: 'span',
         },
@@ -28,6 +28,18 @@ export const portfolioTheme = createTheme({
       color: '#00001c',
       fontSize: '1.8rem',
       fontWeight: 700,
+    },
+    h6: {
+      color: '#00001c',
+      fontWeight: 700,
+    },
+    body2: {
+      fontSize: '1rem',
+      fontFamily: 'Oxygen',
+      '@media (max-width: 600px)': {
+        fontSize: '0.9rem',
+        letterSpacing: '1px',
+      },
     },
   },
 });
