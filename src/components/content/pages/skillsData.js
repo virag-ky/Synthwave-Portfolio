@@ -43,6 +43,10 @@ export const listItems = [
       icon: require('../../../assets/icons/mongoose.png'),
       name: 'Mongoose',
     },
+    {
+      icon: require('../../../assets/icons/ruby.png'),
+      name: 'Ruby',
+    },
   ],
   [
     {
@@ -80,6 +84,10 @@ export const listItems = [
     {
       icon: require('../../../assets/icons/jest.png'),
       name: 'Jest',
+    },
+    {
+      icon: require('../../../assets/icons/rspec.png'),
+      name: 'RSpec',
     },
   ],
   [
