@@ -28,4 +28,21 @@ export const styles = {
       fontSize: '1.1rem',
     },
   },
+  card: {
+    width: '100%',
+    height: '100%',
+    background: 'transparent',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+  },
+  cardMedia: {
+    height: '400px',
+  },
+  chip: {
+    background: 'rgba(250, 250, 250, 0.5)',
+  },
+  carousel: {
+    height: '100%',
+  },
 };

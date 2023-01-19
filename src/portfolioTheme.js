@@ -29,6 +29,9 @@ export const portfolioTheme = createTheme({
       fontSize: '1.8rem',
       fontWeight: 700,
     },
+    h5: {
+      color: '#fff',
+    },
     h6: {
       color: '#00001c',
       fontWeight: 700,
