@@ -22,3 +22,4 @@
 - <a target="_blank" href="https://icons8.com/icon/3u82blvEilbF/jest-can-collect-code-coverage-information-from-entire-projects">Jest can collect code coverage information from entire projects</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
 - <a target="_blank" href="https://icons8.com/icon/zfHRZ6i1Wg0U/figma">Figma</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
 - <a target="_blank" href="https://icons8.com/icon/gKfcEStXI1Hm/mongoose">Mongoose</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+- <a href="https://www.flaticon.com/free-icons/next" title="next icons">Next icons created by Roundicons - Flaticon</a>

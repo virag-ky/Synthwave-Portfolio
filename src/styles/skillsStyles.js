@@ -20,6 +20,7 @@ export const styles = {
     background: 'rgba(250, 250, 250, 0.9)',
     borderRadius: '10px',
     padding: '5px 10px',
+    display: 'flex',
     marginBottom: '20px',
     '@media (min-width: 601px) and (max-width: 1200px)': {
       fontSize: '1.5rem',

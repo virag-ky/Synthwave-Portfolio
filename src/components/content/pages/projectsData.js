@@ -4,7 +4,7 @@ export const projects = [
     image: require('../../../assets/projects/weather-dashboard.png'),
     description:
       'The user can search for a certain city, convert temperatures between Celsius (°C) and Fahrenheit (°F) with the conversion button, and toggle between dark and light mode. The app displays the current city, latitude, longitude, current time, current day and date, current temperature, wind speed, humidity, air quality, atmospheric pressure, time of sunrise and sunset, cloudiness, maximum and minimum temperature, a 5-day / 3 hours forecast and a chart showing the temperature for the next 24 hours.',
-    technologies: ['JavaScript', 'HTML', 'SCSS', 'Webpack', 'API'],
+    technologies: ['JavaScript', 'HTML', 'SCSS', 'Webpack'],
     liveLink: 'https://virag-ky-weather-dashboard.netlify.app/',
     githubLink: 'https://github.com/virag-ky/Weather-Dashboard',
   },
@@ -22,7 +22,7 @@ export const projects = [
     image: require('../../../assets/projects/freetoplaygames.png'),
     description:
       'This app is based on an external API, called FreeToGame API. The data of the games, which is fetched from the API, it gets displayed on the cards. The user can leave a comment on the game cards and give it a like also.',
-    technologies: ['HTML', 'SCSS', 'JavaScript', 'API', 'Webpack', 'Jest'],
+    technologies: ['HTML', 'SCSS', 'JavaScript', 'Webpack', 'Jest'],
     liveLink: 'https://virag-ky.github.io/Free-To-Play-Games/',
     githubLink: 'https://github.com/virag-ky/Free-To-Play-Games',
   },
