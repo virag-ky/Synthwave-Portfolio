@@ -32,6 +32,7 @@ export const styles = {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-evenly',
+    gap: '30px',
   },
   successMessage: {
     height: '100%',
@@ -43,11 +44,27 @@ export const styles = {
   inputsContainer: {
     height: '60%',
     width: '60%',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
   },
   inputs: {
     marginBottom: '25px',
     width: '100%',
     display: 'flex',
     justifyContent: 'space-between',
+    gap: '20px',
+  },
+  fields: {
+    width: '100%',
+  },
+  para: {
+    fontSize: '2.5rem',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    textAlign: 'center',
+    width: '35%',
+    height: '60%',
   },
 };

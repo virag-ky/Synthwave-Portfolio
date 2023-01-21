@@ -53,19 +53,25 @@ const Contact = () => {
         onSubmit={handleSubmit}
         autoComplete="off"
       >
-        <Typography variant="body1">
+        <Typography sx={styles.para} variant="body1">
           If you would like to have a coffee chat, feel free to contact me!
         </Typography>
         <Box sx={styles.inputsContainer}>
           <Box sx={styles.inputs}>
-            <CssTextField id="name" name="name" label="Name" />
-            <CssTextField id="email" email="email" label="Email" />
+            <CssTextField
+              sx={styles.fields}
+              id="name"
+              name="name"
+              label="Name"
+            />
+            <CssTextField
+              sx={styles.fields}
+              id="email"
+              name="email"
+              label="Email"
+            />
           </Box>
-          <TextareaAutosize
-            sx={styles.message}
-            minRows={12}
-            style={{ width: '100%' }}
-          />
+          <TextareaAutosize minRows={12} style={{ width: '100%' }} />
           <Button type="submit" disabled={state.submitting}>
             Submit
           </Button>
