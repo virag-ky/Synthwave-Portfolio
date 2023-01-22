@@ -2,24 +2,25 @@ import { Typography, Box, Button } from '@mui/material';
 import TextField from '@mui/material/TextField';
 import { styles } from '../../../styles/contactStyles';
 import styled from '@emotion/styled';
-import { useForm } from '@formspree/react';
-import TextareaAutosize from '@mui/base/TextareaAutosize';
+import { useForm, Controller } from 'react-hook-form';
+import InputUnstyled from '@mui/base/InputUnstyled';
 
 const Contact = () => {
-  const [state, handleSubmit] = useForm('moqrdeno');
+  const {
+    control,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    defaultValues: {
+      name: '',
+      email: '',
+      message: '',
+    },
+  });
 
-  if (state.succeeded) {
-    return (
-      <Box sx={styles}>
-        <Typography sx={styles.h2} variant="h2">
-          Contact
-        </Typography>
-        <Typography sx={styles.successMessage} variant="body1">
-          Form submitted successfully!
-        </Typography>
-      </Box>
-    );
-  }
+  const onSubmit = (data) => {
+    console.log(data);
+  };
 
   const CssTextField = styled(TextField)({
     '& label.Mui-focused': {
@@ -47,11 +48,12 @@ const Contact = () => {
       <Typography sx={styles.h2} variant="h2">
         Contact
       </Typography>
-      <Box
+      <form
         sx={styles.formContainer}
         component="form"
-        onSubmit={handleSubmit}
-        autoComplete="off"
+        onSubmit={handleSubmit(onSubmit)}
+        method="POST"
+        action="https://formspree.io/f/moqrdeno"
       >
         <Typography sx={styles.para} variant="body1">
           If you have any questions or would like to have a coffee chat, feel
@@ -59,25 +61,40 @@ const Contact = () => {
         </Typography>
         <Box sx={styles.inputsContainer}>
           <Box sx={styles.inputs}>
-            <CssTextField
-              sx={styles.fields}
-              id="name"
+            <Controller
               name="name"
-              label="Name"
+              control={control}
+              rules={{ required: true }}
+              aria-invalid={errors.name ? 'true' : 'false'}
+              render={({ field }) => <InputUnstyled {...field} />}
             />
-            <CssTextField
-              sx={styles.fields}
-              id="email"
+            {errors.name?.type === 'required' && <span>Name is required</span>}
+            <Controller
               name="email"
-              label="Email"
+              control={control}
+              rules={{ required: true }}
+              aria-invalid={errors.email ? 'true' : 'false'}
+              render={({ field }) => <InputUnstyled {...field} />}
             />
+            {errors.email?.type === 'required' && (
+              <span>Email is required</span>
+            )}
           </Box>
-          <TextareaAutosize minRows={12} style={{ width: '100%' }} />
-          <Button sx={styles.submit} type="submit" disabled={state.submitting}>
+          <Controller
+            name="message"
+            control={control}
+            rules={{ required: true }}
+            aria-invalid={errors.message ? 'true' : 'false'}
+            render={({ field }) => <InputUnstyled {...field} />}
+          />
+          {errors.message?.type === 'required' && (
+            <span>Please, leave a message</span>
+          )}
+          <Button sx={styles.submit} type="submit">
             Send Message
           </Button>
         </Box>
-      </Box>
+      </form>
     </Box>
   );
 };

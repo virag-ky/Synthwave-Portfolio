@@ -14,7 +14,9 @@
     "@testing-library/user-event": "^13.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-hook-form": "^7.42.1",
     "react-material-ui-carousel": "^3.4.2",
+    "react-material-ui-form-validator": "^3.0.1",
     "react-router-dom": "^6.6.2",
     "react-scripts": "5.0.1",
     "styled-components": "^5.3.6"
