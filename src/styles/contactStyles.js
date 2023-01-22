@@ -4,6 +4,7 @@ export const styles = {
   '@media (max-width: 1200px)': {
     width: '95vw',
     maxHeight: 'unset',
+    height: 'auto',
     margin: '80px 0 50px 0',
   },
   height: '85vh',
@@ -24,6 +25,7 @@ export const styles = {
     },
     '@media (max-width: 600px)': {
       fontSize: '1.1rem',
+      borderRadius: '5px',
     },
   },
   formContainer: {
@@ -33,6 +35,9 @@ export const styles = {
     alignItems: 'center',
     justifyContent: 'space-evenly',
     gap: '30px',
+    '@media (max-width: 1200px)': {
+      flexDirection: 'column',
+    },
   },
   successMessage: {
     height: '100%',
@@ -43,10 +48,18 @@ export const styles = {
   },
   inputsContainer: {
     height: '60%',
-    width: '60%',
+    width: '50%',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',
+    '@media (max-width: 1200px)': {
+      width: '100%',
+      height: '80%',
+      gap: '20px',
+    },
+    '@media (max-width: 600px)': {
+      gap: '20px',
+    },
   },
   inputs: {
     marginBottom: '25px',
@@ -54,17 +67,52 @@ export const styles = {
     display: 'flex',
     justifyContent: 'space-between',
     gap: '20px',
+    '@media (max-width: 600px)': {
+      flexDirection: 'column',
+    },
   },
   fields: {
     width: '100%',
   },
   para: {
-    fontSize: '2.5rem',
+    fontSize: '2.2rem',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
     textAlign: 'center',
     width: '35%',
     height: '60%',
+    '@media (min-width: 900px) and (max-width: 1200px)': {
+      fontSize: '1.9rem',
+    },
+    '@media (max-width: 1200px)': {
+      width: '60%',
+      height: 'unset',
+      padding: '50px 0 25px 0',
+      fontSize: '1.5rem',
+    },
+    '@media (max-width: 600px)': {
+      fontSize: '1.2rem',
+      height: 'unset',
+      padding: '50px 0 25px 0',
+      width: '100%',
+    },
+  },
+  submit: {
+    width: '160px',
+    fontFamily: 'Oxygen',
+    fontSize: '0.7rem',
+    background: '#1495ff',
+    padding: '18px 0',
+    color: '#fff',
+    fontWeight: 700,
+    letterSpacing: '1.5px',
+    '&:hover': {
+      color: '#1495ff',
+    },
+    '@media (max-width: 600px)': {
+      fontSize: '0.6rem',
+      width: '120px',
+    },
   },
 };

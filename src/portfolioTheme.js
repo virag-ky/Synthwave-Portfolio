@@ -33,7 +33,7 @@ export const portfolioTheme = createTheme({
       color: '#fff',
     },
     h6: {
-      color: '#00001c',
+      color: '#1495ff',
       fontWeight: 700,
     },
     body2: {

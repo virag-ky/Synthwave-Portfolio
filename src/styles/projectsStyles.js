@@ -28,6 +28,7 @@ export const styles = {
     },
     '@media (max-width: 600px)': {
       fontSize: '1.1rem',
+      borderRadius: '5px',
     },
   },
   h5: {
@@ -41,8 +42,6 @@ export const styles = {
   card: {
     width: '100%',
     height: '650px',
-    background: 'transparent',
-    position: 'relative',
   },
   cardMedia: {
     height: '100%',
@@ -118,7 +117,7 @@ export const styles = {
     fontWeight: 700,
     width: '120px',
     textAlign: 'center',
-    borderRadius: '10px',
+    borderRadius: '5px',
     padding: '8px 10px',
     color: '#fff',
     letterSpacing: '1px',
@@ -135,7 +134,6 @@ export const styles = {
     },
   },
   carousel: {
-    height: '100%',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-evenly',

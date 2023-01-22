@@ -54,7 +54,8 @@ const Contact = () => {
         autoComplete="off"
       >
         <Typography sx={styles.para} variant="body1">
-          If you would like to have a coffee chat, feel free to contact me!
+          If you have any questions or would like to have a coffee chat, feel
+          free to contact me!
         </Typography>
         <Box sx={styles.inputsContainer}>
           <Box sx={styles.inputs}>
@@ -72,8 +73,8 @@ const Contact = () => {
             />
           </Box>
           <TextareaAutosize minRows={12} style={{ width: '100%' }} />
-          <Button type="submit" disabled={state.submitting}>
-            Submit
+          <Button sx={styles.submit} type="submit" disabled={state.submitting}>
+            Send Message
           </Button>
         </Box>
       </Box>
