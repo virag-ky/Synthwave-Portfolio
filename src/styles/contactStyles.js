@@ -41,10 +41,17 @@ export const styles = {
   },
   successMessage: {
     height: '100%',
+    minHeight: '300px',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     fontSize: '1.8rem',
+    '@media (min-width: 601px) and (max-width: 1200px)': {
+      fontSize: '1.5rem',
+    },
+    '@media (max-width: 600px)': {
+      fontSize: '1rem',
+    },
   },
   inputsContainer: {
     height: '60%',
@@ -70,9 +77,6 @@ export const styles = {
     '@media (max-width: 600px)': {
       flexDirection: 'column',
     },
-  },
-  fields: {
-    width: '100%',
   },
   para: {
     fontSize: '2.2rem',
@@ -114,5 +118,14 @@ export const styles = {
       fontSize: '0.6rem',
       width: '120px',
     },
+  },
+  inputColumn: {
+    display: 'flex',
+    flexDirection: 'column',
+    width: '100%',
+  },
+  errorMessage: {
+    padding: '10px 0',
+    color: 'red',
   },
 };

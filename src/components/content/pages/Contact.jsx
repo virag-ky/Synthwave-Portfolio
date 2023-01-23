@@ -1,100 +1,133 @@
-import { Typography, Box, Button } from '@mui/material';
-import TextField from '@mui/material/TextField';
+import { Typography, Box, Button, TextareaAutosize } from '@mui/material';
 import { styles } from '../../../styles/contactStyles';
-import styled from '@emotion/styled';
-import { useForm, Controller } from 'react-hook-form';
-import InputUnstyled from '@mui/base/InputUnstyled';
+import { useForm } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as yup from 'yup';
+import { useState } from 'react';
 
 const Contact = () => {
+  const [success, setSuccessMessage] = useState(false);
+
+  const schema = yup.object({
+    name: yup
+      .string()
+      .trim()
+      .matches(/[A-Za-z]+/, 'Name can only contain letters')
+      .max(20, 'Name is too long, maximum 20 characters')
+      .required('Name is required'),
+    email: yup
+      .string()
+      .trim()
+      .email('Email must be valid')
+      .required('Email is required'),
+    message: yup
+      .string()
+      .trim()
+      .max(250, 'Message is too long, maximum 250 characters')
+      .required('Please, leave a message'),
+  });
+
   const {
-    control,
+    register,
     handleSubmit,
     formState: { errors },
   } = useForm({
-    defaultValues: {
-      name: '',
-      email: '',
-      message: '',
-    },
+    resolver: yupResolver(schema),
   });
 
   const onSubmit = (data) => {
-    console.log(data);
-  };
+    const { name, email, message } = data;
+    const obj = {
+      name,
+      email,
+      message,
+    };
 
-  const CssTextField = styled(TextField)({
-    '& label.Mui-focused': {
-      color: '#1495ff',
-    },
-    '& .MuiInput-underline:after': {
-      borderBottomColor: '#1495ff',
-    },
-    '& .MuiOutlinedInput-root': {
-      color: '#fff',
-      '& fieldset': {
-        borderColor: '#fff',
+    fetch('https://formspree.io/f/moqrdeno', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
       },
-      '&:hover fieldset': {
-        borderColor: '#fff',
-      },
-      '&.Mui-focused fieldset': {
-        borderColor: '#1495ff',
-      },
-    },
-  });
+      body: JSON.stringify(obj),
+    });
+    setSuccessMessage(true);
+  };
 
   return (
     <Box sx={styles}>
       <Typography sx={styles.h2} variant="h2">
         Contact
       </Typography>
-      <form
-        sx={styles.formContainer}
-        component="form"
-        onSubmit={handleSubmit(onSubmit)}
-        method="POST"
-        action="https://formspree.io/f/moqrdeno"
-      >
-        <Typography sx={styles.para} variant="body1">
-          If you have any questions or would like to have a coffee chat, feel
-          free to contact me!
+      {success ? (
+        <Typography sx={styles.successMessage} variant="body1">
+          Form was submitted successfully!
         </Typography>
-        <Box sx={styles.inputsContainer}>
-          <Box sx={styles.inputs}>
-            <Controller
-              name="name"
-              control={control}
-              rules={{ required: true }}
-              aria-invalid={errors.name ? 'true' : 'false'}
-              render={({ field }) => <InputUnstyled {...field} />}
+      ) : (
+        <Box
+          component="form"
+          sx={styles.formContainer}
+          onSubmit={handleSubmit(onSubmit)}
+        >
+          <Typography sx={styles.para} variant="body1">
+            If you have any questions or would like to have a coffee chat, feel
+            free to contact me!
+          </Typography>
+          <Box sx={styles.inputsContainer}>
+            <Box sx={styles.inputs}>
+              <Box sx={styles.inputColumn}>
+                <label style={{ marginBottom: '5px' }} htmlFor="name">
+                  Name
+                </label>
+                <input
+                  style={{
+                    width: '100%',
+                    borderRadius: '5px',
+                    outline: 'none',
+                    padding: '10px',
+                  }}
+                  id="name"
+                  {...register('name')}
+                />
+                <Typography sx={styles.errorMessage} variant="body2">
+                  {errors.name?.message}
+                </Typography>
+              </Box>
+              <Box sx={styles.inputColumn}>
+                <label style={{ marginBottom: '5px' }} htmlFor="email">
+                  Email
+                </label>
+                <input
+                  style={{
+                    width: '100%',
+                    borderRadius: '5px',
+                    outline: 'none',
+                    padding: '10px',
+                  }}
+                  id="email"
+                  {...register('email')}
+                />
+                <Typography sx={styles.errorMessage} variant="body2">
+                  {errors.email?.message}
+                </Typography>
+              </Box>
+            </Box>
+            <label style={{ marginBottom: '5px' }} htmlFor="message">
+              Message
+            </label>
+            <TextareaAutosize
+              minRows={12}
+              {...register('message')}
+              id="message"
             />
-            {errors.name?.type === 'required' && <span>Name is required</span>}
-            <Controller
-              name="email"
-              control={control}
-              rules={{ required: true }}
-              aria-invalid={errors.email ? 'true' : 'false'}
-              render={({ field }) => <InputUnstyled {...field} />}
-            />
-            {errors.email?.type === 'required' && (
-              <span>Email is required</span>
-            )}
+            <Typography sx={styles.errorMessage} variant="body2">
+              {errors.message?.message}
+            </Typography>
+            <Button sx={styles.submit} type="submit">
+              Send Message
+            </Button>
           </Box>
-          <Controller
-            name="message"
-            control={control}
-            rules={{ required: true }}
-            aria-invalid={errors.message ? 'true' : 'false'}
-            render={({ field }) => <InputUnstyled {...field} />}
-          />
-          {errors.message?.type === 'required' && (
-            <span>Please, leave a message</span>
-          )}
-          <Button sx={styles.submit} type="submit">
-            Send Message
-          </Button>
         </Box>
-      </form>
+      )}
     </Box>
   );
 };

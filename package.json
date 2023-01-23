@@ -6,6 +6,7 @@
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
     "@formspree/react": "^2.4.1",
+    "@hookform/resolvers": "^2.9.10",
     "@mui/icons-material": "^5.11.0",
     "@mui/material": "^5.11.4",
     "@mui/styled-engine-sc": "^5.11.0",
@@ -19,7 +20,8 @@
     "react-material-ui-form-validator": "^3.0.1",
     "react-router-dom": "^6.6.2",
     "react-scripts": "5.0.1",
-    "styled-components": "^5.3.6"
+    "styled-components": "^5.3.6",
+    "yup": "^0.32.11"
   },
   "scripts": {
     "start": "react-scripts start",
