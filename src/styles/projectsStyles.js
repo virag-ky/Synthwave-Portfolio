@@ -55,7 +55,7 @@ export const styles = {
   divBackground: {
     width: '100%',
     height: '100%',
-    background: 'rgba(0, 0, 28, 0.8)',
+    background: 'rgba(0, 0, 28, 0.7)',
     backdropFilter: 'blur(2px)',
     position: 'absolute',
     top: '0',
@@ -86,7 +86,7 @@ export const styles = {
     gap: '30px',
     padding: '15px 30px',
     position: 'absolute',
-    bottom: '10%',
+    bottom: '5%',
     background: 'rgba(250, 250, 250, 0)',
     '@media (min-width: 601px) and (max-width: 1200px)': {
       width: '70%',

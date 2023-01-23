@@ -1,6 +1,9 @@
 export const styles = {
   boxContainer: {
     display: 'flex',
+    '@media (max-width: 600px)': {
+      alignItems: 'center',
+    },
   },
 
   navContainer: {
@@ -22,7 +25,7 @@ export const styles = {
       '& .MuiDrawer-paper': {
         display: { sx: 'block', lg: 'none' },
         boxSizing: 'border-box',
-        width: { xs: 180 },
+        width: { xs: 80, sm: 180 },
         backgroundColor: '#00001c',
       },
     },

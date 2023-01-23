@@ -1,6 +1,7 @@
 export const styles = {
   icon: {
     color: '#1495ff',
+    minWidth: 'unset',
   },
 
   iconButton: {
@@ -17,6 +18,9 @@ export const styles = {
   listItemButton: {
     display: 'flex',
     justifyContent: 'space-between',
+    '@media (max-width: 600px)': {
+      justifyContent: 'center',
+    },
   },
 
   span: {
@@ -24,6 +28,9 @@ export const styles = {
     textAlign: 'right',
     fontSize: { lg: '16px', xs: '14px' },
     letterSpacing: '1px',
+    '@media (max-width: 600px)': {
+      display: 'none',
+    },
   },
 
   avatar: {
@@ -63,5 +70,10 @@ export const styles = {
     display: 'flex',
     justifyContent: 'space-between',
     padding: '20px 15px',
+    '@media (max-width: 600px)': {
+      flexDirection: 'column',
+      alignItems: 'center',
+      gap: '10px',
+    },
   },
 };
