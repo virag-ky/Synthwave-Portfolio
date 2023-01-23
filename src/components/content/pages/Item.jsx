@@ -10,8 +10,14 @@ import Stack from '@mui/material/Stack';
 const Item = ({ project, styles }) => {
   return (
     <Card sx={styles.card}>
-      <CardMedia sx={styles.cardMedia} component="img" image={project.image} />
-      <Box sx={styles.divBackground}></Box>
+      <Box sx={styles.blurContainer}>
+        <CardMedia
+          sx={styles.cardMedia}
+          component="img"
+          image={project.image}
+        />
+        <Box sx={styles.divBackground}></Box>
+      </Box>
       <CardContent sx={styles.content}>
         <Typography sx={styles.h5} variant="h5" component="div">
           {project.name}

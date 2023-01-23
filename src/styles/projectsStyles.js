@@ -14,7 +14,7 @@ export const styles = {
   maxHeight: '1000px',
   background: 'rgba(0, 0, 28, 0.8)',
   backdropFilter: 'blur(12px)',
-  padding: '30px 30px 10px 30px',
+  padding: '30px',
   borderRadius: '25px',
   display: 'flex',
   flexDirection: 'column',
@@ -61,6 +61,11 @@ export const styles = {
     top: '0',
     left: '0',
   },
+  blurContainer: {
+    width: '100%',
+    height: '100%',
+    position: 'relative',
+  },
   chip: {
     background: 'rgba(250, 250, 250, 0.9)',
     fontWeight: 700,
@@ -70,6 +75,10 @@ export const styles = {
       fontSize: '0.8rem',
     },
     '@media (max-width: 600px)': {
+      fontSize: '0.7rem',
+      width: '80px',
+    },
+    '@media (max-height: 900px)': {
       fontSize: '0.7rem',
       width: '80px',
     },
@@ -97,6 +106,11 @@ export const styles = {
       gap: '20px',
       bottom: '0',
     },
+    '@media (max-height: 900px)': {
+      width: '90%',
+      bottom: '0',
+      gap: '10px',
+    },
   },
   paragraph: {
     fontSize: '1.2rem',
@@ -108,6 +122,9 @@ export const styles = {
     },
     '@media (max-width: 600px)': {
       fontSize: '1rem',
+    },
+    '@media (max-height: 900px)': {
+      fontSize: '1.1rem',
     },
   },
   link: {
@@ -132,10 +149,16 @@ export const styles = {
       fontSize: '0.6rem',
       width: '100px',
     },
+    '@media (max-height: 900px)': {
+      fontSize: '0.6rem',
+      width: '100px',
+      marginTop: '10px',
+    },
   },
   carousel: {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-evenly',
+    overflowY: 'scroll',
   },
 };
