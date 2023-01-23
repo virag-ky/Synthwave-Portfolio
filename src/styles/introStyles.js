@@ -17,7 +17,7 @@ export const styles = {
       fontSize: '3.5rem',
     },
     '@media (max-width: 600px)': {
-      fontSize: '2rem',
+      fontSize: '1.8rem',
     },
   },
 
