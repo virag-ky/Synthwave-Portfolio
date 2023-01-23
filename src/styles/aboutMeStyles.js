@@ -37,6 +37,8 @@ export const styles = {
     '@media (max-width: 600px)': {
       fontSize: '0.9rem',
     },
+  },
+  paraContainer: {
     '@media (max-height: 900px)': {
       overflowY: 'scroll',
     },
