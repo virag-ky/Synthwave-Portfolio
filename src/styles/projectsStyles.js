@@ -107,7 +107,7 @@ export const styles = {
       bottom: '0',
     },
     '@media (max-height: 900px)': {
-      width: '90%',
+      width: '100%',
       bottom: '0',
       gap: '10px',
     },
@@ -124,7 +124,7 @@ export const styles = {
       fontSize: '1rem',
     },
     '@media (max-height: 900px)': {
-      fontSize: '1.1rem',
+      fontSize: '1rem',
     },
   },
   link: {
@@ -151,7 +151,7 @@ export const styles = {
     },
     '@media (max-height: 900px)': {
       fontSize: '0.6rem',
-      width: '100px',
+      width: '120px',
       marginTop: '10px',
     },
   },
