@@ -4,7 +4,7 @@ export const styles = {
   },
 
   navContainer: {
-    width: { lg: 240 },
+    width: { lg: 200 },
     flexShrink: { lg: 0 },
   },
 
@@ -13,7 +13,7 @@ export const styles = {
       '& .MuiDrawer-paper': {
         display: { xs: 'none', sm: 'none', md: 'none', lg: 'block' },
         boxSizing: 'border-box',
-        width: 240,
+        width: 200,
         backgroundColor: '#00001c',
       },
     },
@@ -22,7 +22,7 @@ export const styles = {
       '& .MuiDrawer-paper': {
         display: { sx: 'block', lg: 'none' },
         boxSizing: 'border-box',
-        width: { xs: 180, sm: 220 },
+        width: { xs: 180 },
         backgroundColor: '#00001c',
       },
     },

@@ -7,6 +7,9 @@ export const styles = {
     maxHeight: 'unset',
     margin: '80px 0 50px 0',
   },
+  '@media (max-height: 900px)': {
+    overflowY: 'scroll',
+  },
   height: '85vh',
   maxHeight: '1000px',
   background: 'rgba(0, 0, 28, 0.8)',

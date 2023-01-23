@@ -37,6 +37,9 @@ export const styles = {
     '@media (max-width: 600px)': {
       fontSize: '0.9rem',
     },
+    '@media (max-height: 900px)': {
+      overflowY: 'scroll',
+    },
   },
   span: {
     color: '#1495ff',

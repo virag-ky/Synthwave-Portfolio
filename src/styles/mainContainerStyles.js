@@ -9,7 +9,7 @@ export const styles = {
   justifyContent: 'center',
   alignItems: 'center',
   height: '100vh',
-  width: { lg: 'calc(100% - 238px)', md: '100%' },
+  width: { lg: 'calc(100% - 200px)', md: '100%' },
   marginLeft: 'auto',
   '@media (max-width: 1200px)': {
     height: 'auto',

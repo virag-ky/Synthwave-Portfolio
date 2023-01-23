@@ -10,6 +10,7 @@ export const styles = {
 
   listItem: {
     padding: '8px 5px',
+    transition: '0.5s',
     '&:hover': { background: '#0C2340' },
   },
 
@@ -21,7 +22,7 @@ export const styles = {
   span: {
     color: '#1877F2',
     textAlign: 'right',
-    fontSize: { lg: '18px', sm: '16px' },
+    fontSize: { lg: '16px', xs: '14px' },
     letterSpacing: '1px',
   },
 
