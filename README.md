@@ -1,3 +1,18 @@
+# Synthwave Portfolio
+
+> This is the second version of my synthwave portfolio.
+
+### Live site: https://virag-ky-portfolio.netlify.app/
+
+## Built with:
+
+- React
+- Material UI
+- React Router DOM
+- React Hook Form
+
+## Screenshot:
+
 ## Icons:
 
 - <a href="https://www.flaticon.com/free-icons/javascript" title="javascript icons">Javascript icons created by Freepik - Flaticon</a>
