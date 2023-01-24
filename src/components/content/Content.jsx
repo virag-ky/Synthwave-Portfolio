@@ -1,13 +1,10 @@
-import { lazy, Suspense } from 'react';
 import { useState } from 'react';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
 import Drawer from '@mui/material/Drawer';
 import { styles } from '../../styles/contentStyles';
-
-const ToggleButton = lazy(() => import('../sidebar/ToggleButton'));
-const Sidebar = lazy(() => import('../sidebar/Sidebar'));
-const renderLoader = () => <p>Loading</p>;
+import Sidebar from '../sidebar/Sidebar';
+import ToggleButton from '../sidebar/ToggleButton';
 
 const Content = (props) => {
   const { window } = props;
@@ -19,31 +16,29 @@ const Content = (props) => {
     window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Suspense fallback={renderLoader()}>
-      <Box>
-        <Box sx={styles.boxContainer}>
-          <CssBaseline />
-          <Box sx={styles.navContainer} component="nav" aria-label="nav icons">
-            <Drawer
-              container={container}
-              variant="temporary"
-              open={mobileOpen}
-              onClose={handleDrawerToggle}
-              ModalProps={{
-                keepMounted: true,
-              }}
-              sx={styles.navDrawer.mobile}
-            >
-              <Sidebar />
-            </Drawer>
-            <Drawer variant="permanent" sx={styles.navDrawer.desktop} open>
-              <Sidebar />
-            </Drawer>
-          </Box>
-          <ToggleButton handleDrawerToggle={handleDrawerToggle} />
+    <Box>
+      <Box sx={styles.boxContainer}>
+        <CssBaseline />
+        <Box sx={styles.navContainer} component="nav" aria-label="nav icons">
+          <Drawer
+            container={container}
+            variant="temporary"
+            open={mobileOpen}
+            onClose={handleDrawerToggle}
+            ModalProps={{
+              keepMounted: true,
+            }}
+            sx={styles.navDrawer.mobile}
+          >
+            <Sidebar />
+          </Drawer>
+          <Drawer variant="permanent" sx={styles.navDrawer.desktop} open>
+            <Sidebar />
+          </Drawer>
         </Box>
+        <ToggleButton handleDrawerToggle={handleDrawerToggle} />
       </Box>
-    </Suspense>
+    </Box>
   );
 };
 
