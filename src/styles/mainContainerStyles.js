@@ -1,4 +1,4 @@
-import background from '../assets/header-bg.png';
+import background from '../assets/header-bg.webp';
 
 export const styles = {
   backgroundImage: `url(${background})`,

@@ -5,7 +5,7 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import Toolbar from '@mui/material/Toolbar';
 import { IconButton, Typography, Box } from '@mui/material';
 import Avatar from '@mui/material/Avatar';
-import profile from '../../assets/profile2.jpg';
+import profile from '../../assets/profile2.webp';
 import Link from '@mui/material/Link';
 import { NavLinks } from './links';
 import { SocialLinks } from './links';

@@ -15,6 +15,7 @@ const Item = ({ project, styles }) => {
           sx={styles.cardMedia}
           component="img"
           image={project.image}
+          loading="lazy"
         />
         <Box sx={styles.divBackground}></Box>
       </Box>
