@@ -42,6 +42,9 @@ export const styles = {
   card: {
     width: '100%',
     height: '650px',
+    '@media (max-height: 900px)': {
+      height: '400px',
+    },
   },
   cardMedia: {
     height: '100%',
@@ -50,6 +53,9 @@ export const styles = {
     objectPosition: 'top',
     '@media (max-width: 600px)': {
       objectPosition: '8%',
+    },
+    '@media (max-height: 900px)': {
+      objectFit: 'contain',
     },
   },
   divBackground: {
@@ -158,7 +164,6 @@ export const styles = {
   carousel: {
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'space-evenly',
-    overflowY: 'scroll',
+    justifyContent: 'space-between',
   },
 };
