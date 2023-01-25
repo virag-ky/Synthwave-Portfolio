@@ -43,7 +43,7 @@ export const styles = {
     width: '100%',
     height: '650px',
     '@media (max-height: 900px)': {
-      height: '400px',
+      height: '350px',
     },
   },
   cardMedia: {
