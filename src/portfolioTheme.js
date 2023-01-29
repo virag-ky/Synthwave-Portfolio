@@ -19,10 +19,12 @@ export const portfolioTheme = createTheme({
   },
 
   typography: {
-    fontFamily: 'Orbitron',
+    fontFamily: 'Montserrat',
     body1: {
-      fontFamily: 'Oxygen',
       color: 'rgba(250, 250, 250, 0.9)',
+    },
+    h1: {
+      fontFamily: 'Orbitron',
     },
     h2: {
       color: '#00001c',
@@ -38,7 +40,6 @@ export const portfolioTheme = createTheme({
     },
     body2: {
       fontSize: '1rem',
-      fontFamily: 'Oxygen',
       '@media (max-width: 600px)': {
         fontSize: '0.9rem',
         letterSpacing: '1px',
