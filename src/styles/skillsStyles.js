@@ -1,28 +1,29 @@
 export const styles = {
   width: '70vw',
   maxWidth: '1500px',
+  boxShadow: '0 0 45px rgba(250, 250, 250, 0.1)',
   '@media (max-width: 1200px)': {
     width: '95vw',
     height: 'auto',
     maxHeight: 'unset',
     margin: '80px 0 50px 0',
   },
-  '@media (max-height: 900px)': {
+  '@media (max-height: 900px) and (min-width: 1200px)': {
     overflowY: 'scroll',
   },
   height: '85vh',
   maxHeight: '1000px',
   background: 'rgba(0, 0, 28, 0.8)',
   backdropFilter: 'blur(12px)',
-  padding: '30px',
+  padding: '0 30px 30px 30px',
   borderRadius: '25px',
   display: 'flex',
   flexDirection: 'column',
-  justifyContent: 'space-between',
+  gap: '20px',
   h2: {
-    background: 'rgba(250, 250, 250, 0.9)',
-    borderRadius: '10px',
-    padding: '5px 10px',
+    color: '#fff',
+    borderBottom: '1px solid #1495ff',
+    padding: '25px 10px',
     display: 'flex',
     marginBottom: '20px',
     '@media (min-width: 601px) and (max-width: 1200px)': {
@@ -34,7 +35,6 @@ export const styles = {
     },
   },
   h6: {
-    borderBottom: '1px solid #1495ff',
     padding: '3px 10px',
     marginRight: '60px',
     letterSpacing: '1px',

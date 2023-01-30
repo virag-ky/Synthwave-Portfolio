@@ -3,15 +3,13 @@ export const styles = {
     color: '#1495ff',
     minWidth: 'unset',
   },
-
-  iconButton: {
-    color: '#1495ff',
-    '&:hover': { boxShadow: '0 0 30px #f65ee0', color: '#f65ee0' },
-  },
-
   listItem: {
     padding: '8px 5px',
-    transition: '0.5s',
+    transition: '0.8s',
+    marginBottom: '20px',
+    '@media (max-height: 900px)': {
+      marginBottom: '0',
+    },
     '&:hover': { background: '#0C2340' },
   },
 
@@ -64,16 +62,5 @@ export const styles = {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',
-  },
-
-  socialLinksContainer: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    padding: '20px 15px',
-    '@media (max-width: 600px)': {
-      flexDirection: 'column',
-      alignItems: 'center',
-      gap: '10px',
-    },
   },
 };

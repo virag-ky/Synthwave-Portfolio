@@ -3,12 +3,10 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import Toolbar from '@mui/material/Toolbar';
-import { IconButton, Typography, Box } from '@mui/material';
+import { Typography, Box } from '@mui/material';
 import Avatar from '@mui/material/Avatar';
 import profile from '../../assets/profile2.webp';
-import Link from '@mui/material/Link';
 import { NavLinks } from './links';
-import { SocialLinks } from './links';
 import { useNavigate } from 'react-router-dom';
 import { styles } from '../../styles/sidebarStyles';
 
@@ -37,13 +35,6 @@ const Sidebar = () => {
             </ListItem>
           ))}
         </List>
-      </Box>
-      <Box sx={styles.socialLinksContainer}>
-        {SocialLinks.map((link) => (
-          <Link key={link.id} href={link.link} target="_blank">
-            <IconButton sx={styles.iconButton}>{link.icon}</IconButton>
-          </Link>
-        ))}
       </Box>
     </Box>
   );

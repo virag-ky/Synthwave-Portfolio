@@ -1,12 +1,40 @@
-import { Typography, Box, Button, TextareaAutosize } from '@mui/material';
+import {
+  IconButton,
+  Typography,
+  Box,
+  Button,
+  TextareaAutosize,
+} from '@mui/material';
 import { styles } from '../../../styles/contactStyles';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import { useState } from 'react';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import Link from '@mui/material/Link';
 
 const Contact = () => {
   const [success, setSuccessMessage] = useState(false);
+
+  const SocialLinks = [
+    {
+      id: 0,
+      icon: <GitHubIcon sx={{ fontSize: { lg: '35px', xs: '22px' } }} />,
+      link: 'https://github.com/virag-ky',
+    },
+    {
+      id: 1,
+      icon: <TwitterIcon sx={{ fontSize: { lg: '35px', xs: '22px' } }} />,
+      link: 'https://twitter.com/Virag_Ky',
+    },
+    {
+      id: 2,
+      icon: <LinkedInIcon sx={{ fontSize: { lg: '35px', xs: '22px' } }} />,
+      link: 'https://www.linkedin.com/in/virag-kormoczy/',
+    },
+  ];
 
   const schema = yup.object({
     name: yup
@@ -68,10 +96,19 @@ const Contact = () => {
           sx={styles.formContainer}
           onSubmit={handleSubmit(onSubmit)}
         >
-          <Typography sx={styles.para} variant="body1">
-            If you have any questions or would like to have a coffee chat, feel
-            free to contact me!
-          </Typography>
+          <Box sx={styles.container}>
+            <Typography sx={styles.para} variant="body1">
+              If you have any questions or would like to have a coffee chat,
+              feel free to contact me!
+            </Typography>
+            <Box sx={styles.socialLinksContainer}>
+              {SocialLinks.map((link) => (
+                <Link key={link.id} href={link.link} target="_blank">
+                  <IconButton sx={styles.iconButton}>{link.icon}</IconButton>
+                </Link>
+              ))}
+            </Box>
+          </Box>
           <Box sx={styles.inputsContainer}>
             <Box sx={styles.inputs}>
               <Box sx={styles.inputColumn}>
@@ -115,7 +152,7 @@ const Contact = () => {
               Message
             </label>
             <TextareaAutosize
-              minRows={12}
+              minRows={10}
               {...register('message')}
               id="message"
             />

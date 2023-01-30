@@ -1,6 +1,8 @@
 export const styles = {
   width: '70vw',
   maxWidth: '1500px',
+  padding: '0 30px',
+  boxShadow: '0 0 45px rgba(250, 250, 250, 0.1)',
   '@media (max-width: 1200px)': {
     width: '95vw',
     maxHeight: 'unset',
@@ -11,32 +13,32 @@ export const styles = {
   maxHeight: '1000px',
   background: 'rgba(0, 0, 28, 0.8)',
   backdropFilter: 'blur(12px)',
-  padding: '30px',
   borderRadius: '25px',
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'space-evenly',
   h2: {
-    background: 'rgba(250, 250, 250, 0.9)',
-    borderRadius: '10px',
-    padding: '5px 10px',
+    color: '#fff',
+    borderBottom: '1px solid #1495ff',
+    padding: '25px 10px',
     '@media (min-width: 601px) and (max-width: 1200px)': {
       fontSize: '1.5rem',
     },
     '@media (max-width: 600px)': {
       fontSize: '1.1rem',
-      borderRadius: '5px',
     },
   },
   formContainer: {
     width: '100%',
-    height: '100%',
+    height: '90%',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-evenly',
     gap: '30px',
     '@media (max-width: 1200px)': {
       flexDirection: 'column',
+      gap: '10px',
+      paddingBottom: '40px',
     },
   },
   successMessage: {
@@ -58,14 +60,10 @@ export const styles = {
     width: '50%',
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'space-between',
+    justifyContent: 'space-evenly',
     '@media (max-width: 1200px)': {
       width: '100%',
       height: '80%',
-      gap: '20px',
-    },
-    '@media (max-width: 600px)': {
-      gap: '20px',
     },
   },
   inputs: {
@@ -79,26 +77,27 @@ export const styles = {
     },
   },
   para: {
-    fontSize: '2.2rem',
+    fontSize: '2rem',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
     textAlign: 'center',
-    width: '35%',
+    width: '100%',
     height: '60%',
-    '@media (min-width: 900px) and (max-width: 1200px)': {
-      fontSize: '1.9rem',
+    marginBottom: '30px',
+    '@media (min-width: 900px) and (max-width: 1440px)': {
+      fontSize: '1.8rem',
     },
     '@media (max-width: 1200px)': {
       width: '60%',
       height: 'unset',
-      padding: '50px 0 25px 0',
+      padding: '50px 0 0 0',
       fontSize: '1.5rem',
     },
     '@media (max-width: 600px)': {
       fontSize: '1.2rem',
       height: 'unset',
-      padding: '50px 0 25px 0',
+      padding: '50px 0 0 0',
       width: '100%',
     },
   },
@@ -107,7 +106,7 @@ export const styles = {
     fontFamily: 'Oxygen',
     fontSize: '0.7rem',
     background: '#1495ff',
-    padding: '18px 0',
+    padding: '15px 0',
     color: '#fff',
     fontWeight: 700,
     letterSpacing: '1.5px',
@@ -127,5 +126,26 @@ export const styles = {
   errorMessage: {
     padding: '10px 0',
     color: 'red',
+  },
+  container: {
+    width: '35%',
+    '@media (max-width: 1200px)': {
+      width: '100%',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+    },
+  },
+  socialLinksContainer: {
+    display: 'flex',
+    justifyContent: 'center',
+    gap: '20px',
+    padding: '20px 15px',
+    width: '100%',
+  },
+  iconButton: {
+    color: '#1495ff',
+    transition: '0.5s',
+    '&:hover': { boxShadow: '0 0 30px #fff', color: '#fff' },
   },
 };

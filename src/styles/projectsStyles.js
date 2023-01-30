@@ -1,6 +1,7 @@
 export const styles = {
   width: '70vw',
   maxWidth: '1500px',
+  boxShadow: '0 0 45px rgba(250, 250, 250, 0.1)',
   '@media (max-width: 1200px)': {
     width: '95vw',
     height: 'auto',
