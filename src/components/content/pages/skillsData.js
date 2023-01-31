@@ -1,11 +1,4 @@
-export const sectionNames = [
-  'Front-End',
-  'Back-End',
-  'Databases',
-  'Styles',
-  'Testing',
-  'Tools',
-];
+export const sectionNames = ['Front-End', 'Back-End', 'Styles', 'Tools'];
 
 export const listItems = [
   [
@@ -43,8 +36,7 @@ export const listItems = [
       icon: require('../../../assets/icons/mongoose.png'),
       name: 'Mongoose',
     },
-  ],
-  [
+
     {
       icon: require('../../../assets/icons/mongodb.png'),
       name: 'MongoDB',
@@ -52,10 +44,6 @@ export const listItems = [
     {
       icon: require('../../../assets/icons/mysql.png'),
       name: 'MySQL',
-    },
-    {
-      icon: require('../../../assets/icons/postgresql.png'),
-      name: 'PostgreSQL',
     },
   ],
   [
@@ -76,12 +64,7 @@ export const listItems = [
       name: 'Figma',
     },
   ],
-  [
-    {
-      icon: require('../../../assets/icons/jest.png'),
-      name: 'Jest',
-    },
-  ],
+
   [
     {
       icon: require('../../../assets/icons/command-line.png'),
@@ -102,6 +85,10 @@ export const listItems = [
     {
       icon: require('../../../assets/icons/github.png'),
       name: 'GitHub',
+    },
+    {
+      icon: require('../../../assets/icons/jest.png'),
+      name: 'Jest',
     },
   ],
 ];

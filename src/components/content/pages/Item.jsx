@@ -1,20 +1,14 @@
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Link from '@mui/material/Link';
-import { Typography, Box, ListItem, ListItemText } from '@mui/material';
+import { Typography, Box } from '@mui/material';
 
 const Item = ({ project, styles }) => {
   return (
     <Card sx={styles.card}>
-      <CardMedia
-        sx={styles.cardMedia}
-        component="img"
-        image={project.image}
-        loading="lazy"
-      />
-      <CardContent sx={styles.content}>
+      <CardMedia component="img" image={project.image} loading="lazy" />
+      <CardContent>
         <Typography sx={styles.h5} variant="h5" component="div">
           {project.name}
         </Typography>

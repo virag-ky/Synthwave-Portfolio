@@ -14,7 +14,7 @@ export const styles = {
   maxHeight: '1000px',
   background: 'rgba(0, 0, 28, 0.8)',
   backdropFilter: 'blur(12px)',
-  padding: '0 30px 30px 30px',
+  padding: '0 30px 50px 30px',
   borderRadius: '25px',
   display: 'flex',
   flexDirection: 'column',
@@ -41,22 +41,34 @@ export const styles = {
   card: {
     marginBottom: '30px',
   },
-  cardMedia: {},
   techContainer: {
-    background: '#00001c',
     borderRadius: '8px',
     display: 'flex',
-    justifyContent: 'space-between',
-    padding: '8px 10px',
+    flexWrap: 'wrap',
+    gap: '10px',
+    '@media (min-width: 601px) and (max-width: 1200px)': {
+      gap: '20px',
+    },
+    '@media (min-width: 1201px)': {
+      gap: '25px',
+    },
   },
   tech: {
-    color: '#fff',
+    color: '#00001c',
+    background: 'rgba(0, 0, 0, 0.1)',
+    padding: '6px',
+    borderRadius: '5px',
   },
-  content: {},
   paragraph: {
     color: '#00001c',
     fontSize: '0.9rem',
     margin: '20px 0',
+    '@media (min-width: 601px) and (max-width: 1200px)': {
+      fontSize: '1.1rem',
+    },
+    '@media (min-width: 1201px)': {
+      fontSize: '1.2rem',
+    },
   },
   buttons: {
     width: '100%',
@@ -72,6 +84,16 @@ export const styles = {
     borderRadius: '5px',
     fontSize: '0.6rem',
     fontWeight: 700,
+    transition: '0.8s',
+    '@media (min-width: 601px) and (max-width: 1200px)': {
+      fontSize: '0.8rem',
+    },
+    '@media (min-width: 1201px)': {
+      fontSize: '0.9rem',
+    },
+    '&:hover': {
+      background: '#0C2340',
+    },
   },
   container: {
     overflowY: 'scroll',

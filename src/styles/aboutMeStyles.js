@@ -40,7 +40,7 @@ export const styles = {
   },
   paraContainer: {
     '@media (max-height: 920px) and (min-width: 1200px)': {
-      overflowY: 'scroll',
+      overflowY: 'auto',
     },
   },
   span: {

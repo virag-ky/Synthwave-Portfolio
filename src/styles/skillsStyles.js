@@ -8,9 +8,6 @@ export const styles = {
     maxHeight: 'unset',
     margin: '80px 0 50px 0',
   },
-  '@media (max-height: 900px) and (min-width: 1200px)': {
-    overflowY: 'scroll',
-  },
   height: '85vh',
   maxHeight: '1000px',
   background: 'rgba(0, 0, 28, 0.8)',
@@ -19,7 +16,6 @@ export const styles = {
   borderRadius: '25px',
   display: 'flex',
   flexDirection: 'column',
-  gap: '20px',
   h2: {
     color: '#fff',
     borderBottom: '1px solid #1495ff',
@@ -32,6 +28,10 @@ export const styles = {
     '@media (max-width: 600px)': {
       fontSize: '1.1rem',
     },
+  },
+  container: {
+    marginTop: '30px',
+    overflowY: 'auto',
   },
   h6: {
     padding: '3px 10px',

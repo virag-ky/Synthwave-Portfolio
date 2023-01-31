@@ -15,9 +15,9 @@ const Skills = () => {
       <Typography sx={styles.h2} variant="h2">
         Skills
       </Typography>
-      <Grid container spacing={2}>
+      <Grid sx={styles.container} container spacing={2}>
         {sectionNames.map((title, id) => (
-          <Grid md={4} sm={4} xs={12} key={title} item>
+          <Grid md={3} sm={4} xs={12} key={title} item>
             <Typography sx={styles.h6} variant="h6">
               {title}
             </Typography>
