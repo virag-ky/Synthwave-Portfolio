@@ -31,7 +31,6 @@ export const styles = {
     },
     '@media (max-width: 600px)': {
       fontSize: '1.1rem',
-      borderRadius: '5px',
     },
   },
   h6: {

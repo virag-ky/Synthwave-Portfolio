@@ -1,10 +1,9 @@
 export const styles = {
   width: '70vw',
   maxWidth: '1500px',
-  boxShadow: '0 0 45px rgba(250, 250, 250, 0.1)',
+  boxShadow: '0 0 45px rgba(250, 250, 250, 0.2)',
   '@media (max-width: 1200px)': {
     width: '95vw',
-    height: 'auto',
     maxHeight: 'unset',
     margin: '80px 0 50px 0',
   },
@@ -15,21 +14,20 @@ export const styles = {
   maxHeight: '1000px',
   background: 'rgba(0, 0, 28, 0.8)',
   backdropFilter: 'blur(12px)',
-  padding: '30px',
+  padding: '0 30px 30px 30px',
   borderRadius: '25px',
   display: 'flex',
   flexDirection: 'column',
   h2: {
-    background: 'rgba(250, 250, 250, 0.9)',
-    borderRadius: '10px',
-    padding: '5px 10px',
+    color: '#fff',
+    borderBottom: '1px solid #1495ff',
+    padding: '25px 10px',
     marginBottom: '20px',
     '@media (min-width: 601px) and (max-width: 1200px)': {
       fontSize: '1.5rem',
     },
     '@media (max-width: 600px)': {
       fontSize: '1.1rem',
-      borderRadius: '5px',
     },
   },
   h5: {
@@ -41,130 +39,41 @@ export const styles = {
     },
   },
   card: {
-    width: '100%',
-    height: '650px',
-    '@media (max-height: 900px)': {
-      height: '350px',
-    },
+    marginBottom: '30px',
   },
-  cardMedia: {
-    height: '100%',
-    width: '100%',
-    objectFit: 'cover',
-    objectPosition: 'top',
-    '@media (max-width: 600px)': {
-      objectPosition: '8%',
-    },
-    '@media (max-height: 900px)': {
-      objectFit: 'contain',
-    },
-  },
-  divBackground: {
-    width: '100%',
-    height: '100%',
-    background: 'rgba(0, 0, 28, 0.7)',
-    backdropFilter: 'blur(2px)',
-    position: 'absolute',
-    top: '0',
-    left: '0',
-  },
-  blurContainer: {
-    width: '100%',
-    height: '100%',
-    position: 'relative',
-  },
-  chip: {
-    background: 'rgba(250, 250, 250, 0.9)',
-    fontWeight: 700,
-    fontFamily: 'Oxygen',
-    width: '90px',
-    '@media (min-width: 601px) and (max-width: 1200px)': {
-      fontSize: '0.8rem',
-    },
-    '@media (max-width: 600px)': {
-      fontSize: '0.7rem',
-      width: '80px',
-    },
-    '@media (max-height: 900px)': {
-      fontSize: '0.7rem',
-      width: '80px',
-    },
+  cardMedia: {},
+  techContainer: {
+    background: '#00001c',
+    borderRadius: '8px',
+    display: 'flex',
+    justifyContent: 'space-between',
+    padding: '8px 10px',
   },
   tech: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    gap: '10px',
-  },
-  content: {
-    width: '55%',
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '30px',
-    padding: '15px 30px',
-    position: 'absolute',
-    bottom: '5%',
-    background: 'rgba(250, 250, 250, 0)',
-    '@media (min-width: 601px) and (max-width: 1200px)': {
-      width: '70%',
-      bottom: '0',
-    },
-    '@media (max-width: 600px)': {
-      width: '100%',
-      gap: '20px',
-      bottom: '0',
-    },
-    '@media (max-height: 900px)': {
-      width: '100%',
-      bottom: '0',
-      gap: '10px',
-    },
-  },
-  paragraph: {
-    fontSize: '1.2rem',
-    display: 'flex',
-    alignItems: 'center',
     color: '#fff',
-    '@media (min-width: 601px) and (max-width: 1200px)': {
-      fontSize: '1.1rem',
-    },
-    '@media (max-width: 600px)': {
-      fontSize: '1rem',
-    },
-    '@media (max-height: 900px)': {
-      fontSize: '1rem',
-    },
+  },
+  content: {},
+  paragraph: {
+    color: '#00001c',
+    fontSize: '0.9rem',
+    margin: '20px 0',
+  },
+  buttons: {
+    width: '100%',
+    display: 'flex',
+    gap: '10px',
+    marginTop: '20px',
   },
   link: {
     textDecoration: 'none',
     background: '#1495ff',
-    fontSize: '0.8rem',
-    fontWeight: 700,
-    width: '120px',
-    textAlign: 'center',
-    borderRadius: '5px',
-    padding: '8px 10px',
     color: '#fff',
-    letterSpacing: '1px',
-    marginTop: '25px',
-    '&:hover': {
-      background: '#0C2340',
-    },
-    '@media (min-width: 601px) and (max-width: 1200px)': {
-      fontSize: '0.7rem',
-    },
-    '@media (max-width: 600px)': {
-      fontSize: '0.6rem',
-      width: '100px',
-    },
-    '@media (max-height: 900px)': {
-      fontSize: '0.6rem',
-      width: '120px',
-      marginTop: '10px',
-    },
+    padding: '8px',
+    borderRadius: '5px',
+    fontSize: '0.6rem',
+    fontWeight: 700,
   },
-  carousel: {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'space-between',
+  container: {
+    overflowY: 'scroll',
   },
 };

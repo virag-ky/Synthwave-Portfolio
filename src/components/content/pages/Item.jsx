@@ -3,22 +3,17 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Link from '@mui/material/Link';
-import { Typography, Box } from '@mui/material';
-import Chip from '@mui/material/Chip';
-import Stack from '@mui/material/Stack';
+import { Typography, Box, ListItem, ListItemText } from '@mui/material';
 
 const Item = ({ project, styles }) => {
   return (
     <Card sx={styles.card}>
-      <Box sx={styles.blurContainer}>
-        <CardMedia
-          sx={styles.cardMedia}
-          component="img"
-          image={project.image}
-          loading="lazy"
-        />
-        <Box sx={styles.divBackground}></Box>
-      </Box>
+      <CardMedia
+        sx={styles.cardMedia}
+        component="img"
+        image={project.image}
+        loading="lazy"
+      />
       <CardContent sx={styles.content}>
         <Typography sx={styles.h5} variant="h5" component="div">
           {project.name}
@@ -26,19 +21,22 @@ const Item = ({ project, styles }) => {
         <Typography sx={styles.paragraph} variant="body1">
           {project.description}
         </Typography>
-        <Stack sx={styles.tech} direction="row" spacing={0}>
+        <Box sx={styles.techContainer}>
           {project.technologies.map((tech) => (
-            <Chip key={tech} sx={styles.chip} label={tech} />
+            <Typography sx={styles.tech} variant="body2" key={tech}>
+              {tech}
+            </Typography>
           ))}
-        </Stack>
-        <CardActions sx={styles.CardActions}>
+        </Box>
+
+        <Box sx={styles.buttons}>
           <Link sx={styles.link} href={project.liveLink} target="_blank">
             VIEW LIVE
           </Link>
           <Link sx={styles.link} href={project.githubLink} target="_blank">
             SOURCE CODE
           </Link>
-        </CardActions>
+        </Box>
       </CardContent>
     </Card>
   );

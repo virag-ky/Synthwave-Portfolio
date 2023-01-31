@@ -27,12 +27,11 @@ export const portfolioTheme = createTheme({
       fontFamily: 'Orbitron',
     },
     h2: {
-      color: '#00001c',
       fontSize: '1.8rem',
       fontWeight: 700,
     },
     h5: {
-      color: '#fff',
+      color: '#00001c',
     },
     h6: {
       color: '#1495ff',
@@ -41,8 +40,7 @@ export const portfolioTheme = createTheme({
     body2: {
       fontSize: '1rem',
       '@media (max-width: 600px)': {
-        fontSize: '0.9rem',
-        letterSpacing: '1px',
+        fontSize: '0.8rem',
       },
     },
   },

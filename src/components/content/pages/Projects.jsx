@@ -1,6 +1,5 @@
 import { lazy, Suspense } from 'react';
 import { Oval } from 'react-loader-spinner';
-import Carousel from 'react-material-ui-carousel';
 import { Box } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import { projects } from './projectsData';
@@ -29,11 +28,11 @@ const Projects = () => {
         <Typography variant="h2" sx={styles.h2}>
           Projects
         </Typography>
-        <Carousel sx={styles.carousel}>
+        <Box sx={styles.container}>
           {projects.map((project) => (
             <Item key={project.name} styles={styles} project={project} />
           ))}
-        </Carousel>
+        </Box>
       </Box>
     </Suspense>
   );
