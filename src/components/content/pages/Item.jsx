@@ -22,7 +22,6 @@ const Item = ({ project, styles }) => {
             </Typography>
           ))}
         </Box>
-
         <Box sx={styles.buttons}>
           <Link sx={styles.link} href={project.liveLink} target="_blank">
             VIEW LIVE
