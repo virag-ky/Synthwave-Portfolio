@@ -12,7 +12,8 @@
 - React Hook Form
 
 ## Screenshot:
-![Screenshot from 2023-01-23 14-16-01](https://user-images.githubusercontent.com/79658534/214039606-699c7110-6410-4e1c-b5c5-7e73e4c4e3ef.png)
+
+![Screenshot from 2023-02-02 13-20-09](https://user-images.githubusercontent.com/79658534/216393861-37384350-9a06-425a-bf82-17265c4bc33c.png)
 
 
 
