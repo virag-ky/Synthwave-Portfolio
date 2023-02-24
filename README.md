@@ -35,8 +35,6 @@
 - <a target="_blank" href="https://icons8.com/icon/sOWbK4N3cxGh/webpack">Webpack</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
 - <a target="_blank" href="https://icons8.com/icon/24895/npm">NPM</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
 - <a target="_blank" href="https://icons8.com/icon/UFXRpPFebwa2/mysql-logo">MySQL Logo</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
-- <a target="_blank" href="https://icons8.com/icon/38561/postgresql">PostgreSQL</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
-- <a target="_blank" href="https://icons8.com/icon/22189/ruby-programming-language">Ruby Programming Language</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
 - <a target="_blank" href="https://icons8.com/icon/84710/bootstrap">Bootstrap</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
 - <a target="_blank" href="https://icons8.com/icon/3u82blvEilbF/jest-can-collect-code-coverage-information-from-entire-projects">Jest can collect code coverage information from entire projects</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
 - <a target="_blank" href="https://icons8.com/icon/zfHRZ6i1Wg0U/figma">Figma</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
