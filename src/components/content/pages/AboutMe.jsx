@@ -13,8 +13,8 @@ const AboutMe = () => {
           Hello, I'm Virag!
           <br />
           <br />
-          I'm a <span>full-stack web developer</span> from Hungary and currently
-          living in Romania.
+          I'm a dedicated <span>software developer</span> who specializes in web
+          development using <span>JavaScript</span>.
           <br />
           <br /> I found my passion for programming at the end of 2021, and in
           2022 I joined an online software program called{' '}
