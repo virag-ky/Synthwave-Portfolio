@@ -1,5 +1,6 @@
 import { Box, Typography } from '@mui/material';
 import { styles } from '../../../styles/aboutMeStyles';
+import laptopImg from '../../../assets/laptop.png';
 
 const AboutMe = () => {
   return (
@@ -16,6 +17,7 @@ const AboutMe = () => {
           I'm a dedicated <span>software developer</span> who specializes in web
           development using <span>JavaScript</span>.
           <br />
+          <img src={laptopImg} alt="laptop image" />
           <br /> I found my passion for programming at the end of 2021, and in
           2022 I joined an online software program called{' '}
           <span>Microverse</span>, where I studied full-stack web development.{' '}

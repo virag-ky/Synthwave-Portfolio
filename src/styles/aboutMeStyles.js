@@ -26,7 +26,7 @@ export const styles = {
     },
   },
   p: {
-    fontSize: '1.4rem',
+    fontSize: '1.3rem',
     lineHeight: '1.4',
     '@media (min-width: 601px) and (max-width: 1200px)': {
       fontSize: '1.1rem',
@@ -42,5 +42,12 @@ export const styles = {
   },
   span: {
     color: '#1495ff',
+  },
+  img: {
+    float: 'right',
+    width: '300px',
+    '@media (max-width: 600px)': {
+      width: '150px',
+    },
   },
 };

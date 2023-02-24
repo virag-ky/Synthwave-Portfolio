@@ -8,7 +8,7 @@ const Intro = () => {
         Virag Kormoczy
       </Typography>
       <Typography sx={styles.h3} variant="h3">
-        Full-Stack Web Developer
+        Full-Stack JavaScript Developer
       </Typography>
     </Box>
   );
